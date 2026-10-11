@@ -4,6 +4,8 @@ Jogo local em português para PC, feito em Godot 4.6.3 / GDScript: cultivo, rest
 
 ## Jogar
 
+Downloads pelo GitHub: [projeto Godot (Código → Download ZIP)](https://github.com/mvasconcelosdefarias01-cyber/Gamedev) e [pacote executável para Windows 11](https://github.com/mvasconcelosdefarias01-cyber/Gamedev/raw/windows-11-build/artifacts/FazendaEntreEcos-Windows11.zip). O SHA-256 do pacote Windows é `66c90727d3833a485ea42ec2b709c95479335fae6f560409596c01bc334475bb`.
+
 No Windows 11 (64 bits), use o pacote Windows: extraia os arquivos na mesma pasta e abra `FazendaEntreEcos.exe`. O `FazendaEntreEcos.pck` precisa ficar ao lado do executável; Godot 4.6.3 está incluído. Por ser uma distribuição local sem assinatura digital, o Windows pode pedir confirmação na primeira abertura. Os saves ficam em `%APPDATA%\Godot\app_userdata\Fazenda Entre Ecos\saves`.
 
 Se o ZIP do Windows for grande demais para baixar pela interface, pegue suas partes `.part00` a `.part04`, coloque todas na mesma pasta e use o comando de remontagem que acompanha a entrega. Depois extraia o ZIP resultante. Quem já tem Godot 4.6.3 no Windows pode baixar só o PCK de 1,5 MB e abri-lo pelo Godot, ou baixar o projeto fonte de 6,1 MB e importar `Gamedev/project.godot`.
