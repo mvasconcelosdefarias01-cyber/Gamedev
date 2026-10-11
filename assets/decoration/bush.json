@@ -1,0 +1,29 @@
+{
+  "id": "prop_bush",
+  "path": "res://assets/decoration/bush.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "a1459d226779d18a77f7cf1ad6c79e0f3526468074844cc2d5ba490f068343bb",
+  "decorative": true
+}

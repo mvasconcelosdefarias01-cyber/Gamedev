@@ -1,0 +1,28 @@
+{
+  "id": "action_inspect",
+  "path": "res://assets/ui/action_inspect.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "016f69dd4cf13e6cab94557e852001dedd409d07cafd53d18ba2da11a40e1332"
+}

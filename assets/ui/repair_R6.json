@@ -1,0 +1,28 @@
+{
+  "id": "repair_R6",
+  "path": "res://assets/ui/repair_R6.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "13d8c543335d29a371be71a8260f853e86855bea4ccfb069bd2479085576a974"
+}

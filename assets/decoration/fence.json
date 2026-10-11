@@ -1,0 +1,29 @@
+{
+  "id": "prop_fence",
+  "path": "res://assets/decoration/fence.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "4d629669529c7b1b71e4b9bce06942ce96490401bb9db4db77064ee70620f392",
+  "decorative": true
+}

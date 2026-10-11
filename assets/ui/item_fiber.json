@@ -1,0 +1,28 @@
+{
+  "id": "item_fiber",
+  "path": "res://assets/ui/item_fiber.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "892039c53b660703a776675773a37009a2788265615f64b84a5f7c4c48ce82c1"
+}

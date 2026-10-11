@@ -1,0 +1,28 @@
+{
+  "id": "key_P6",
+  "path": "res://assets/narrative/key_P6.png",
+  "frame_size": [
+    160,
+    90
+  ],
+  "pivot": [
+    80,
+    45
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "f680d7a10a536414367337db0c939ad9cfb21ec88f9600f621b03c1f441500f0"
+}

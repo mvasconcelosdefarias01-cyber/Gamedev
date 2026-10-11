@@ -1,0 +1,28 @@
+{
+  "id": "action_save",
+  "path": "res://assets/ui/action_save.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "1e963a9b9816515446965f0fb6972eeb995de073ce5688c760111d0554dd0467"
+}

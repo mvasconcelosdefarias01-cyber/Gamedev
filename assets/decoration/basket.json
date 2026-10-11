@@ -1,0 +1,29 @@
+{
+  "id": "prop_basket",
+  "path": "res://assets/decoration/basket.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "97fd4bf635cf68da947828be7b20a65895056a1b5c0c8e03f6bbef146d152542",
+  "decorative": true
+}

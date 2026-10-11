@@ -1,0 +1,28 @@
+{
+  "id": "key_P3",
+  "path": "res://assets/narrative/key_P3.png",
+  "frame_size": [
+    160,
+    90
+  ],
+  "pivot": [
+    80,
+    45
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "b4b1bb6694d7b2487664be186d837c5060e3eba8361e7c795893f0d5593f1552"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "fish_1",
+  "path": "res://assets/ui/fish_1.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "2c2116dcf0f51ce5bd614374044cf0fa2ab44032bc62e448730862933d011eac"
+}

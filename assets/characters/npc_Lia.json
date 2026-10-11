@@ -1,0 +1,43 @@
+{
+  "id": "npc_Lia",
+  "path": "res://assets/characters/npc_Lia.png",
+  "frame_size": [
+    32,
+    48
+  ],
+  "pivot": [
+    16,
+    47
+  ],
+  "columns": 5,
+  "rows": 4,
+  "frame_count": 20,
+  "animations": {
+    "idle": {
+      "frames": [
+        0,
+        1
+      ],
+      "fps": 2,
+      "loop": true
+    },
+    "talk": {
+      "frames": [
+        2,
+        3,
+        4
+      ],
+      "fps": 4,
+      "loop": true
+    }
+  },
+  "directions": [
+    "S",
+    "W",
+    "N",
+    "E"
+  ],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "0a523aa20f8bfc121bcd211f7ceeaab5d52f5262b955c4da98dd1ca65bdeb7c1"
+}

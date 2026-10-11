@@ -1,0 +1,38 @@
+{
+  "id": "machine_collector",
+  "path": "res://assets/machines/collector.png",
+  "frame_size": [
+    48,
+    40
+  ],
+  "pivot": [
+    24,
+    36
+  ],
+  "columns": 5,
+  "rows": 1,
+  "frame_count": 5,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    },
+    "active": {
+      "frames": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "fps": 8,
+      "loop": true
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "04a4ee5f5bf1ece3008e5bddda6d410a317b75d10ffc9655d4506ca20b0a1280"
+}

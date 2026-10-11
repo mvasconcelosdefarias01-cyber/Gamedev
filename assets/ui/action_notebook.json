@@ -1,0 +1,28 @@
+{
+  "id": "action_notebook",
+  "path": "res://assets/ui/action_notebook.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "d8701546178efdfa0609ecb755b8e41fb3b58b804cdaf8905987d4b2c55cb53f"
+}

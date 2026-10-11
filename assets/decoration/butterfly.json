@@ -1,0 +1,29 @@
+{
+  "id": "prop_butterfly",
+  "path": "res://assets/decoration/butterfly.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "3a7f7cbff6cb10249b9a63016e65c7d558d649cb176221edebf1fa09b05fe67c",
+  "decorative": true
+}

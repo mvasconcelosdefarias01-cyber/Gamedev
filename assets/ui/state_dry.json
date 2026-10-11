@@ -1,0 +1,28 @@
+{
+  "id": "state_dry",
+  "path": "res://assets/ui/state_dry.png",
+  "frame_size": [
+    16,
+    16
+  ],
+  "pivot": [
+    8,
+    8
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "be48d2bd8dd205b5e13f88dc94ddc4c84ba2dc156476d4e4d20a33113f046cb0"
+}

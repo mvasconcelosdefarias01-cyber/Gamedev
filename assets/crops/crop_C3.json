@@ -1,0 +1,50 @@
+{
+  "id": "crop_C3",
+  "path": "res://assets/crops/crop_C3.png",
+  "frame_size": [
+    32,
+    40
+  ],
+  "pivot": [
+    16,
+    38
+  ],
+  "columns": 5,
+  "rows": 1,
+  "frame_count": 5,
+  "animations": {
+    "seed": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    },
+    "sprout": {
+      "frames": [
+        1
+      ],
+      "fps": 1,
+      "loop": false
+    },
+    "grow": {
+      "frames": [
+        2
+      ],
+      "fps": 1,
+      "loop": false
+    },
+    "mature": {
+      "frames": [
+        3,
+        4
+      ],
+      "fps": 2,
+      "loop": true
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "f39f6d3c84a79dc5333e9b677ef88be4d501d44a7ac54bc55c10a449b76487b8"
+}

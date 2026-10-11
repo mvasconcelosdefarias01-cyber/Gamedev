@@ -1,0 +1,28 @@
+{
+  "id": "action_sell",
+  "path": "res://assets/ui/action_sell.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "ed87c4c0def5800585ea1ecfc4cdda2379434150399a73741ffc52c2cbfc5d7f"
+}

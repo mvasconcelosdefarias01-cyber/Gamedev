@@ -1,0 +1,33 @@
+{
+  "id": "pier",
+  "path": "res://assets/structures/pier.png",
+  "frame_size": [
+    128,
+    64
+  ],
+  "pivot": [
+    64,
+    55
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "90cde6e4ae93c92109410d9524ce6b31d48b048c13f8bb1fb564e66c5ac52d40",
+  "footprint_tiles": [
+    3,
+    1
+  ],
+  "structure_state": ""
+}

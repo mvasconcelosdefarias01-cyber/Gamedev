@@ -1,0 +1,28 @@
+{
+  "id": "key_P5",
+  "path": "res://assets/narrative/key_P5.png",
+  "frame_size": [
+    160,
+    90
+  ],
+  "pivot": [
+    80,
+    45
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "d9e4044492e61e0e710897588e5364c3ca25e4bada613d356630f341b7bf634e"
+}

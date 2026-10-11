@@ -1,0 +1,28 @@
+{
+  "id": "tree_Escuta",
+  "path": "res://assets/ui/tree_Escuta.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "343a2871713463f3a5325afe6378ed3bc2ea0a792e77d15158deefb35daee91d"
+}

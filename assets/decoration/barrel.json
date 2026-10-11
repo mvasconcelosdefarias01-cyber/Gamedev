@@ -1,0 +1,29 @@
+{
+  "id": "prop_barrel",
+  "path": "res://assets/decoration/barrel.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "f47c1c0910c1184913316298bda6af7d774291564c9993f861e576e2290b604f",
+  "decorative": true
+}

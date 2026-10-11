@@ -1,0 +1,33 @@
+{
+  "id": "field_open",
+  "path": "res://assets/structures/field_open.png",
+  "frame_size": [
+    128,
+    64
+  ],
+  "pivot": [
+    64,
+    48
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "a290c54f78fbafe49dbdec04c4beb20dacd56a3126fa3a750b6bbb7887e01917",
+  "footprint_tiles": [
+    2,
+    2
+  ],
+  "structure_state": "open"
+}

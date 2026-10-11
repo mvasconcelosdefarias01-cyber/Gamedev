@@ -1,0 +1,30 @@
+{
+  "id": "cosmetic_pot",
+  "path": "res://assets/decoration/cosmetic_pot.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "21383bff36e1c9c3ffce694a37b9ff8f0a81a6e93b5b135e4643e4aa342b9abe",
+  "decorative": true,
+  "coin_cost": 200
+}

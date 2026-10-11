@@ -1,0 +1,33 @@
+{
+  "id": "sale_box",
+  "path": "res://assets/structures/sale_box.png",
+  "frame_size": [
+    64,
+    64
+  ],
+  "pivot": [
+    32,
+    58
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "d9577480d98166fabf16182cac9f9e1674bc91e1a6abe087725c2d4cb2522bad",
+  "footprint_tiles": [
+    1,
+    1
+  ],
+  "structure_state": ""
+}

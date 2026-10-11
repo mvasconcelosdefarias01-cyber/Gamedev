@@ -1,0 +1,29 @@
+{
+  "id": "prop_rock",
+  "path": "res://assets/decoration/rock.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "6f71ff0c43086ae09b723f7b0b8b313e7a6b9b881b0ea8aac28585cc8f1eb2fc",
+  "decorative": true
+}

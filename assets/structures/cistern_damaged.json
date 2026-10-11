@@ -1,0 +1,33 @@
+{
+  "id": "cistern_damaged",
+  "path": "res://assets/structures/cistern_damaged.png",
+  "frame_size": [
+    128,
+    112
+  ],
+  "pivot": [
+    64,
+    102
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "31035b5f889fdc0069c44eecc4276746c68712b5ddb830f3b22a5071a5aace59",
+  "footprint_tiles": [
+    2,
+    2
+  ],
+  "structure_state": "damaged"
+}

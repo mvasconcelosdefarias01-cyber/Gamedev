@@ -1,0 +1,33 @@
+{
+  "id": "block_sign",
+  "path": "res://assets/structures/block_sign.png",
+  "frame_size": [
+    32,
+    48
+  ],
+  "pivot": [
+    16,
+    45
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "8e7a79f6bf1c115fc5e7f4170925affe6e0d1afbcf9c9b59e8f9c3a5d676d75e",
+  "footprint_tiles": [
+    0,
+    0
+  ],
+  "structure_state": ""
+}

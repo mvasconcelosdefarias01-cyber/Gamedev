@@ -1,0 +1,28 @@
+{
+  "id": "item_compost",
+  "path": "res://assets/ui/item_compost.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "0cbe6c9805ffae5db98a0c8ea950c042bb439cb7c18d333391c62fc9af52cf14"
+}

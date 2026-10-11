@@ -1,0 +1,29 @@
+{
+  "id": "prop_footprint",
+  "path": "res://assets/decoration/footprint.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "fb5c0ff2cc2b9ccbaee051ae9c564f310bad6b35b7d559c0f9fc4fbb419e191d",
+  "decorative": true
+}

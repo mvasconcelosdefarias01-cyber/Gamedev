@@ -1,0 +1,28 @@
+{
+  "id": "item_wood",
+  "path": "res://assets/ui/item_wood.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "d49f762cd3b8af7a4d7927ed5d2f5871a74d4336b5a2b01840973f00345826ef"
+}

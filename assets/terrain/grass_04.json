@@ -1,0 +1,29 @@
+{
+  "id": "terrain_grass_04",
+  "path": "res://assets/terrain/grass_04.png",
+  "frame_size": [
+    64,
+    32
+  ],
+  "pivot": [
+    32,
+    16
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "ad99ba79dd3c6e4c78193404a9d74f91f45f32742adbf023cec052be19ee8e33",
+  "terrain_kind": "grass"
+}

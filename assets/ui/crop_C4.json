@@ -1,0 +1,28 @@
+{
+  "id": "icon_crop_C4",
+  "path": "res://assets/ui/crop_C4.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "3dae643c2b5b83bf47bd78b1bffb0435079e43be2d3df95aee8544d758e0b63d"
+}

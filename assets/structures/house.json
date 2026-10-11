@@ -1,0 +1,33 @@
+{
+  "id": "house",
+  "path": "res://assets/structures/house.png",
+  "frame_size": [
+    192,
+    176
+  ],
+  "pivot": [
+    96,
+    164
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "9164d0399bcea181d0ebbdbe6579eb54e7b57032285739bcd4eb6ff88c6c67d9",
+  "footprint_tiles": [
+    3,
+    3
+  ],
+  "structure_state": ""
+}

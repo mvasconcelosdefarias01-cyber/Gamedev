@@ -1,0 +1,28 @@
+{
+  "id": "action_move",
+  "path": "res://assets/ui/action_move.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "392959862e8ede6f04effa6dfba543ccad8c8a8530ae224a8e494e8dfc819c85"
+}

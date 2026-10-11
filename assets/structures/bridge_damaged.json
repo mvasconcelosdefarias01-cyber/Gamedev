@@ -1,0 +1,33 @@
+{
+  "id": "bridge_damaged",
+  "path": "res://assets/structures/bridge_damaged.png",
+  "frame_size": [
+    128,
+    80
+  ],
+  "pivot": [
+    64,
+    64
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "a3bedd88bfd4adfdcd49df64682316881f2b8f392f9f69ee7a605d75a134b1ef",
+  "footprint_tiles": [
+    3,
+    1
+  ],
+  "structure_state": "damaged"
+}

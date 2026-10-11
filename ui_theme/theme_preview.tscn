@@ -1,0 +1,105 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Theme" path="res://ui_theme/fazenda_theme.tres" id="1_theme"]
+
+[node name="ThemePreview" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_theme")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.419608, 0.572549, 0.576471, 1)
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -280.0
+offset_right = 400.0
+offset_bottom = 280.0
+
+[node name="Column" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/Column"]
+layout_mode = 2
+theme_type_variation = &"Title"
+text = "Fazenda Entre Ecos"
+
+[node name="Subtitle" type="Label" parent="Panel/Column"]
+layout_mode = 2
+text = "Cultive, restaure e escute o que a água conserva."
+
+[node name="Tabs" type="TabBar" parent="Panel/Column"]
+layout_mode = 2
+tab_count = 3
+tab_0/title = "Cultivo"
+tab_1/title = "Engenho"
+tab_2/title = "Escuta"
+
+[node name="Section" type="Label" parent="Panel/Column"]
+layout_mode = 2
+theme_type_variation = &"SectionTitle"
+text = "R2 — Abrir canal baixo"
+
+[node name="Details" type="Label" parent="Panel/Column"]
+layout_mode = 2
+text = "A água volta a correr. Desbloqueia milho, padrões e um aspersor em B1.\nReserve 24 feijões e 6 madeiras para este reparo."
+autowrap_mode = 3
+
+[node name="Progress" type="ProgressBar" parent="Panel/Column"]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+value = 65.0
+show_percentage = false
+
+[node name="Costs" type="Label" parent="Panel/Column"]
+layout_mode = 2
+text = "286 / 450 moedas  ·  24 / 24 feijões  ·  6 / 6 madeiras"
+
+[node name="Actions" type="HBoxContainer" parent="Panel/Column"]
+layout_mode = 2
+
+[node name="Pin" type="Button" parent="Panel/Column/Actions"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "Fixar e reservar"
+
+[node name="Repair" type="Button" parent="Panel/Column/Actions"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+disabled = true
+text = "Reparar — faltam 164 moedas"
+
+[node name="Note" type="Label" parent="Panel/Column"]
+layout_mode = 2
+theme_type_variation = &"Caption"
+text = "A reserva vale para toda a fazenda. O excedente pode ser vendido."
+autowrap_mode = 3
+
+[node name="Settings" type="CheckBox" parent="Panel/Column"]
+layout_mode = 2
+text = "Movimento reduzido"
+
+[node name="Spacer" type="Control" parent="Panel/Column"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Back" type="Button" parent="Panel/Column"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "Voltar à fazenda  ·  Esc"

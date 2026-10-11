@@ -1,0 +1,29 @@
+{
+  "id": "terrain_path_06",
+  "path": "res://assets/terrain/path_06.png",
+  "frame_size": [
+    64,
+    32
+  ],
+  "pivot": [
+    32,
+    16
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "6852d6d5fd2fb100d9d234ce74f2509106d3d003eab39ed92cd8fc1448239160",
+  "terrain_kind": "path"
+}

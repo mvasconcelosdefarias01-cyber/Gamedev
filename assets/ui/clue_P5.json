@@ -1,0 +1,28 @@
+{
+  "id": "clue_P5",
+  "path": "res://assets/ui/clue_P5.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "e258ba2b71628f09c52049d59c8812ce6858905ff911572c093ea7a92623f714"
+}

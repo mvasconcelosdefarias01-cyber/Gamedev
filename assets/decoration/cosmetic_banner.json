@@ -1,0 +1,30 @@
+{
+  "id": "cosmetic_banner",
+  "path": "res://assets/decoration/cosmetic_banner.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "1bcf9a6be3eae2dc462ffeb2d62c24f52a928e885dee536ba4c0222cadd237d5",
+  "decorative": true,
+  "coin_cost": 200
+}

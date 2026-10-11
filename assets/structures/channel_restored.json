@@ -1,0 +1,33 @@
+{
+  "id": "channel_restored",
+  "path": "res://assets/structures/channel_restored.png",
+  "frame_size": [
+    64,
+    32
+  ],
+  "pivot": [
+    32,
+    16
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "5b55e1d9eb9042910d7a5f855f3002cff918f05085773df388e0620cbcae03d8",
+  "footprint_tiles": [
+    1,
+    1
+  ],
+  "structure_state": "restored"
+}

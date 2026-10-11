@@ -1,0 +1,28 @@
+{
+  "id": "portrait_player",
+  "path": "res://assets/portraits/player.png",
+  "frame_size": [
+    80,
+    80
+  ],
+  "pivot": [
+    40,
+    40
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "0afc85617f60d03a237f076287b561693c4ee3b3ca871ce00b296e4ffd334b5e"
+}

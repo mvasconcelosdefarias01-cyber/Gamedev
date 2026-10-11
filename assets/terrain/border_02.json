@@ -1,0 +1,29 @@
+{
+  "id": "border_02",
+  "path": "res://assets/terrain/border_02.png",
+  "frame_size": [
+    64,
+    32
+  ],
+  "pivot": [
+    32,
+    16
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "856cd0372086f20b9a9a589c8af9448594fbd2d6a0f7f52b7beb91ea83d7ca45",
+  "edge_direction": "NE"
+}

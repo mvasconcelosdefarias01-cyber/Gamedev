@@ -1,0 +1,28 @@
+{
+  "id": "key_P2",
+  "path": "res://assets/narrative/key_P2.png",
+  "frame_size": [
+    160,
+    90
+  ],
+  "pivot": [
+    80,
+    45
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "79afb2124f1d9c25f72bb01d3aa30baa2463c74a607a02d5e7bdca6046da66ff"
+}

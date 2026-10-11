@@ -1,0 +1,50 @@
+{
+  "id": "crop_C1",
+  "path": "res://assets/crops/crop_C1.png",
+  "frame_size": [
+    32,
+    40
+  ],
+  "pivot": [
+    16,
+    38
+  ],
+  "columns": 5,
+  "rows": 1,
+  "frame_count": 5,
+  "animations": {
+    "seed": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    },
+    "sprout": {
+      "frames": [
+        1
+      ],
+      "fps": 1,
+      "loop": false
+    },
+    "grow": {
+      "frames": [
+        2
+      ],
+      "fps": 1,
+      "loop": false
+    },
+    "mature": {
+      "frames": [
+        3,
+        4
+      ],
+      "fps": 2,
+      "loop": true
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "5d1e1b2ff93d02617c48e5e74b625e9d04b9afb4d18e0f6d38814f7fdd350a03"
+}

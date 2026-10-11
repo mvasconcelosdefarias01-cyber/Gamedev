@@ -1,0 +1,29 @@
+{
+  "id": "prop_fern",
+  "path": "res://assets/decoration/fern.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "90a16720ce1dfa4d06dcaf4e824349226af138bf83af29fc47b77c8ac839bfb7",
+  "decorative": true
+}

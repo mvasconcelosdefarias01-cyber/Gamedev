@@ -1,0 +1,28 @@
+{
+  "id": "key_P7",
+  "path": "res://assets/narrative/key_P7.png",
+  "frame_size": [
+    160,
+    90
+  ],
+  "pivot": [
+    80,
+    45
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "627c351e5e7b8ee390a726854933fa9be79f45f361a0ee14914933f1ed354315"
+}

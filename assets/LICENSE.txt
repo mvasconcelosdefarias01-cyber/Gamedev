@@ -1,0 +1,22 @@
+Fazenda Entre Ecos — assets originais de produção local
+SPDX-License-Identifier: CC0-1.0
+
+Os sprites PNG, seus metadados e o áudio deste diretório foram criados
+originalmente para Fazenda Entre Ecos pela ferramenta local nova
+tools/north_asset_forge_2d/forge.py, desenvolvida neste repositório por
+autorização do usuário. Não são exports de um produto externo preexistente
+chamado North Asset Forge 2D. Não foram usados modelos, gravações ou sprites
+de terceiros como conteúdo redistribuído neste pacote.
+
+Na medida permitida por lei, os contribuidores desta produção local
+dedicam estes assets ao domínio público sob CC0 1.0 Universal. É permitido
+usar, modificar e redistribuir, inclusive comercialmente, sem atribuição.
+Código legal: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+As imagens e os documentos de referência em docs/source não pertencem a
+este pacote de assets. Seus direitos não são alterados por esta licença.
+Fontes tipográficas em ui_theme têm suas próprias licenças.
+
+Autoria e proveniência dos exports: manifest.json; fonte editável e WAVs:
+tools/north_asset_forge_2d/. Exportação raster e síntese sonora locais,
+determinísticas, sem serviços pagos ou geração por provedor externo.

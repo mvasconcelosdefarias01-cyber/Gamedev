@@ -1,0 +1,29 @@
+{
+  "id": "prop_log",
+  "path": "res://assets/decoration/log.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "1ba1cc8cd0a10ec21ed11cb8d06d993e76b30c84e6811981f2bf40c1d37e2306",
+  "decorative": true
+}

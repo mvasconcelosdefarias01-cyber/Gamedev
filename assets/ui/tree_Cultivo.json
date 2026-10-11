@@ -1,0 +1,28 @@
+{
+  "id": "tree_Cultivo",
+  "path": "res://assets/ui/tree_Cultivo.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "7506858c04f37b48eabd7b1afba26735fa1234e89d10faaf600a9780ee4c1805"
+}

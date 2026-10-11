@@ -1,0 +1,33 @@
+{
+  "id": "cupboard",
+  "path": "res://assets/structures/cupboard.png",
+  "frame_size": [
+    48,
+    72
+  ],
+  "pivot": [
+    24,
+    66
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "d0476ed1c07b07e15346c1b82a166e79b3466f37532753483596a6dc757b5ca6",
+  "footprint_tiles": [
+    1,
+    1
+  ],
+  "structure_state": ""
+}

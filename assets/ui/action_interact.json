@@ -1,0 +1,28 @@
+{
+  "id": "action_interact",
+  "path": "res://assets/ui/action_interact.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "79c23812c35738b67a9a0ade1ea11e47e8de12ba1c680772a18c3629c3f438f2"
+}

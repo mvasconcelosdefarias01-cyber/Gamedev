@@ -1,0 +1,28 @@
+{
+  "id": "plot_wet",
+  "path": "res://assets/terrain/plot_wet.png",
+  "frame_size": [
+    64,
+    32
+  ],
+  "pivot": [
+    32,
+    16
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "ef2ed4f48fbda9458cad81f22493e6c6a3cb1210db498ce923147a04a3c4c4f3"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "workshop_damaged",
+  "path": "res://assets/structures/workshop_damaged.png",
+  "frame_size": [
+    160,
+    144
+  ],
+  "pivot": [
+    80,
+    135
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "7bb85006cdaf9585f03b3801ef21ba7148e7e1754b7e5c0a8fca0b0248809821",
+  "footprint_tiles": [
+    3,
+    2
+  ],
+  "structure_state": "damaged"
+}

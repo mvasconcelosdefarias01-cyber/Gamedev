@@ -1,0 +1,28 @@
+{
+  "id": "clue_P4",
+  "path": "res://assets/ui/clue_P4.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "c78f7906b2c32ded31e76b7263a2deb66858cc1db605cb447d4a3f7a5153a615"
+}

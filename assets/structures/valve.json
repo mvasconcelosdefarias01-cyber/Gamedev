@@ -1,0 +1,33 @@
+{
+  "id": "valve",
+  "path": "res://assets/structures/valve.png",
+  "frame_size": [
+    32,
+    48
+  ],
+  "pivot": [
+    16,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "4a8d852b931c506f5d54d3b4cc2a3836c1e4057c220099a7550500f1570ceda6",
+  "footprint_tiles": [
+    0,
+    0
+  ],
+  "structure_state": ""
+}

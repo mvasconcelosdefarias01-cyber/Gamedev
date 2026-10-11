@@ -1,0 +1,30 @@
+{
+  "id": "cosmetic_lantern",
+  "path": "res://assets/decoration/cosmetic_lantern.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "c6244368d88093faf7586665d0eeca57ca4975a7e1fda907aa308523f9e578f1",
+  "decorative": true,
+  "coin_cost": 200
+}

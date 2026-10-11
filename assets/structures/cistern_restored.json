@@ -1,0 +1,33 @@
+{
+  "id": "cistern_restored",
+  "path": "res://assets/structures/cistern_restored.png",
+  "frame_size": [
+    128,
+    112
+  ],
+  "pivot": [
+    64,
+    102
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "96c9a4a9dccc15dfedd799f9145cd6e00f08d53d2f83272459ccde5cf7bddc6c",
+  "footprint_tiles": [
+    2,
+    2
+  ],
+  "structure_state": "restored"
+}

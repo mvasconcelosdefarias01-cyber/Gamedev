@@ -1,0 +1,184 @@
+{
+  "passed": true,
+  "raster_assets": 158,
+  "audio_assets": 23,
+  "raster_frames_including_shirts": 852,
+  "errors": [],
+  "checks": [
+    "PNG bytes and RGBA",
+    "real transparency",
+    "sheet dimensions",
+    "animation indices",
+    "pivot bounds",
+    "stable repair footprints",
+    "SHA-256",
+    "audio decoding",
+    "audio duration",
+    "decoded PCM peak below clipping"
+  ],
+  "audio_verification": [
+    {
+      "id": "sfx_seed",
+      "decoded_peak": 0.178925,
+      "rms": 0.048057,
+      "clipped_samples": 0,
+      "duration": 0.2
+    },
+    {
+      "id": "sfx_water",
+      "decoded_peak": 0.072266,
+      "rms": 0.018403,
+      "clipped_samples": 0,
+      "duration": 0.5
+    },
+    {
+      "id": "sfx_grow",
+      "decoded_peak": 0.187134,
+      "rms": 0.062506,
+      "clipped_samples": 0,
+      "duration": 0.36
+    },
+    {
+      "id": "sfx_harvest",
+      "decoded_peak": 0.183899,
+      "rms": 0.032137,
+      "clipped_samples": 0,
+      "duration": 0.26
+    },
+    {
+      "id": "sfx_sale",
+      "decoded_peak": 0.22641,
+      "rms": 0.07209,
+      "clipped_samples": 0,
+      "duration": 0.4
+    },
+    {
+      "id": "sfx_purchase",
+      "decoded_peak": 0.252136,
+      "rms": 0.071782,
+      "clipped_samples": 0,
+      "duration": 0.48
+    },
+    {
+      "id": "machine_sprinkler_loop",
+      "decoded_peak": 0.013794,
+      "rms": 0.003363,
+      "clipped_samples": 0,
+      "duration": 2.0
+    },
+    {
+      "id": "machine_collector_loop",
+      "decoded_peak": 0.051147,
+      "rms": 0.009502,
+      "clipped_samples": 0,
+      "duration": 2.0
+    },
+    {
+      "id": "machine_seeder_loop",
+      "decoded_peak": 0.0513,
+      "rms": 0.010643,
+      "clipped_samples": 0,
+      "duration": 2.0
+    },
+    {
+      "id": "ambient_wind",
+      "decoded_peak": 0.004211,
+      "rms": 0.000817,
+      "clipped_samples": 0,
+      "duration": 8.0
+    },
+    {
+      "id": "ambient_birds",
+      "decoded_peak": 0.026825,
+      "rms": 0.004643,
+      "clipped_samples": 0,
+      "duration": 8.0
+    },
+    {
+      "id": "ambient_water",
+      "decoded_peak": 0.016937,
+      "rms": 0.00442,
+      "clipped_samples": 0,
+      "duration": 8.0
+    },
+    {
+      "id": "memory_canal",
+      "decoded_peak": 0.232758,
+      "rms": 0.073045,
+      "clipped_samples": 0,
+      "duration": 1.5
+    },
+    {
+      "id": "memory_reflection",
+      "decoded_peak": 0.2164,
+      "rms": 0.074036,
+      "clipped_samples": 0,
+      "duration": 1.5
+    },
+    {
+      "id": "memory_letter",
+      "decoded_peak": 0.218323,
+      "rms": 0.073745,
+      "clipped_samples": 0,
+      "duration": 1.5
+    },
+    {
+      "id": "memory_final",
+      "decoded_peak": 0.299164,
+      "rms": 0.080029,
+      "clipped_samples": 0,
+      "duration": 2.8
+    },
+    {
+      "id": "ui_focus",
+      "decoded_peak": 0.045532,
+      "rms": 0.022368,
+      "clipped_samples": 0,
+      "duration": 0.1
+    },
+    {
+      "id": "ui_confirm",
+      "decoded_peak": 0.045502,
+      "rms": 0.023879,
+      "clipped_samples": 0,
+      "duration": 0.19
+    },
+    {
+      "id": "ui_unavailable",
+      "decoded_peak": 0.045532,
+      "rms": 0.02388,
+      "clipped_samples": 0,
+      "duration": 0.19
+    },
+    {
+      "id": "ui_panel",
+      "decoded_peak": 0.045563,
+      "rms": 0.023879,
+      "clipped_samples": 0,
+      "duration": 0.19
+    },
+    {
+      "id": "music_arrival",
+      "decoded_peak": 0.100616,
+      "rms": 0.02313,
+      "clipped_samples": 0,
+      "duration": 32.0
+    },
+    {
+      "id": "music_restoring",
+      "decoded_peak": 0.100769,
+      "rms": 0.023648,
+      "clipped_samples": 0,
+      "duration": 32.0
+    },
+    {
+      "id": "music_ending",
+      "decoded_peak": 0.099274,
+      "rms": 0.022742,
+      "clipped_samples": 0,
+      "duration": 32.0
+    }
+  ],
+  "visual_review": "sample contact sheets reviewed by art_design before full; integrated review separate",
+  "human_test": "not performed"
+}

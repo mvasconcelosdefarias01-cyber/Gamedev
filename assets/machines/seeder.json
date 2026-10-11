@@ -1,0 +1,38 @@
+{
+  "id": "machine_seeder",
+  "path": "res://assets/machines/seeder.png",
+  "frame_size": [
+    40,
+    40
+  ],
+  "pivot": [
+    20,
+    36
+  ],
+  "columns": 5,
+  "rows": 1,
+  "frame_count": 5,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    },
+    "active": {
+      "frames": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "fps": 8,
+      "loop": true
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "3ab3c7ea1b0ca1252699b5805f7c3550234ad11e633d9d8ae8eaccd3a4ece967"
+}

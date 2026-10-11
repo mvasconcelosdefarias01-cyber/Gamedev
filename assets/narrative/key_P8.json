@@ -1,0 +1,28 @@
+{
+  "id": "key_P8",
+  "path": "res://assets/narrative/key_P8.png",
+  "frame_size": [
+    160,
+    90
+  ],
+  "pivot": [
+    80,
+    45
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "9c558a2e643c55ca5097e43d274d0c496c911b3c75049e8c03224983696d5519"
+}

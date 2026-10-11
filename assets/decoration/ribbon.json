@@ -1,0 +1,29 @@
+{
+  "id": "prop_ribbon",
+  "path": "res://assets/decoration/ribbon.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "56861f6155f6049d9aaf155e35caae8fc595a283e47ca1380fc6322df4e73a0d",
+  "decorative": true
+}

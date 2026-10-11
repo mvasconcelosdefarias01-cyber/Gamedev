@@ -1,0 +1,38 @@
+{
+  "id": "machine_sprinkler",
+  "path": "res://assets/machines/sprinkler.png",
+  "frame_size": [
+    32,
+    32
+  ],
+  "pivot": [
+    16,
+    28
+  ],
+  "columns": 5,
+  "rows": 1,
+  "frame_count": 5,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    },
+    "active": {
+      "frames": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "fps": 8,
+      "loop": true
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "749554a3c9b20c018ba4d60dd4242d31e995c1b95529606ee24826bc3952ef09"
+}

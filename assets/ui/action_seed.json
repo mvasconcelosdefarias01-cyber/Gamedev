@@ -1,0 +1,28 @@
+{
+  "id": "action_seed",
+  "path": "res://assets/ui/action_seed.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "e07570d12fbd8fdefce95ec5fed5bc3dba7eab939d54031671128def00f7b851"
+}

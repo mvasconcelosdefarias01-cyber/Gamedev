@@ -1,0 +1,43 @@
+{
+  "id": "npc_Rui",
+  "path": "res://assets/characters/npc_Rui.png",
+  "frame_size": [
+    32,
+    48
+  ],
+  "pivot": [
+    16,
+    47
+  ],
+  "columns": 5,
+  "rows": 4,
+  "frame_count": 20,
+  "animations": {
+    "idle": {
+      "frames": [
+        0,
+        1
+      ],
+      "fps": 2,
+      "loop": true
+    },
+    "talk": {
+      "frames": [
+        2,
+        3,
+        4
+      ],
+      "fps": 4,
+      "loop": true
+    }
+  },
+  "directions": [
+    "S",
+    "W",
+    "N",
+    "E"
+  ],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "50023559f7507b552d4e8262dd795be97d20d192de22a36829b2970dae5c8ad0"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "tree_Engenho",
+  "path": "res://assets/ui/tree_Engenho.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "221b3688af2550df9c087207adcc632103f525d180c0c6447d9b7d1492a373f3"
+}

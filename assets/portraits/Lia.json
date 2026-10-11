@@ -1,0 +1,28 @@
+{
+  "id": "portrait_Lia",
+  "path": "res://assets/portraits/Lia.png",
+  "frame_size": [
+    80,
+    80
+  ],
+  "pivot": [
+    40,
+    40
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "27394b3efc236549a053bf3c6c75c3a6362f9245ced59002f61f789411a19101"
+}

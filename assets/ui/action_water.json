@@ -1,0 +1,28 @@
+{
+  "id": "action_water",
+  "path": "res://assets/ui/action_water.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "ee934dd1acb91f0d7ecb328d45f4b1bc9446515bb6fdc1b0e16287ec3fd3acc1"
+}

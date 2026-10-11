@@ -1,0 +1,28 @@
+{
+  "id": "clue_P8",
+  "path": "res://assets/ui/clue_P8.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "3f46ab425cb043d2d646212aa07823c374a419b55953f4f3f6134447b92ec7ad"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "icon_crop_C5",
+  "path": "res://assets/ui/crop_C5.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "a2652b448029013060e99af7744c3c1f36f502662608bc58c8b3447fdd6e2846"
+}

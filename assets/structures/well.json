@@ -1,0 +1,33 @@
+{
+  "id": "well",
+  "path": "res://assets/structures/well.png",
+  "frame_size": [
+    64,
+    80
+  ],
+  "pivot": [
+    32,
+    72
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "58c943a9dd38495232c9a41f6a65849c07cb9eaa5816e66984217174fcc954b6",
+  "footprint_tiles": [
+    1,
+    1
+  ],
+  "structure_state": ""
+}

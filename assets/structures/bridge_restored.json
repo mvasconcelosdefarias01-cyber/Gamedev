@@ -1,0 +1,33 @@
+{
+  "id": "bridge_restored",
+  "path": "res://assets/structures/bridge_restored.png",
+  "frame_size": [
+    128,
+    80
+  ],
+  "pivot": [
+    64,
+    64
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "5a537d837009c4566cb855cc712153ec6e9f0dc4aa9d28f6442bdeaddff2c4ff",
+  "footprint_tiles": [
+    3,
+    1
+  ],
+  "structure_state": "restored"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "prop_tree_fruit",
+  "path": "res://assets/decoration/tree_fruit.png",
+  "frame_size": [
+    80,
+    96
+  ],
+  "pivot": [
+    40,
+    92
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "cbbf451e342cae4c6d8c84f99b4aa2d9de5f591b37644b618f6942ff9fcd2800",
+  "decorative": true
+}

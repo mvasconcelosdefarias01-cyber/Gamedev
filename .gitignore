@@ -1,0 +1,7 @@
+.godot/
+builds/
+artifacts/
+docs/source/
+__pycache__/
+*.pyc
+tools/north_asset_forge_2d/preview/

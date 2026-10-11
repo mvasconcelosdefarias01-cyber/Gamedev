@@ -1,0 +1,29 @@
+{
+  "id": "prop_bird",
+  "path": "res://assets/decoration/bird.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "3fdb83a8cb54949018519f3ac36fdb3ab1b5462b38132cfd954940f74e07f37b",
+  "decorative": true
+}

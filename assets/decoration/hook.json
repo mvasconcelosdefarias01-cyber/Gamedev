@@ -1,0 +1,29 @@
+{
+  "id": "prop_hook",
+  "path": "res://assets/decoration/hook.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "642adc029b76cdb9442b1235363f2c549ebf33aa92cec470e7ca411667bc39f1",
+  "decorative": true
+}

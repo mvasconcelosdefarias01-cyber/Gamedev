@@ -1,0 +1,28 @@
+{
+  "id": "item_stone",
+  "path": "res://assets/ui/item_stone.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "7460fca3c87d67f4922f3a29d9a1aef07c680000269bedcbf3f0040bb03b9114"
+}

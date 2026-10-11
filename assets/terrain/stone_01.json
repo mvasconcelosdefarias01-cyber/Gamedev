@@ -1,0 +1,29 @@
+{
+  "id": "terrain_stone_01",
+  "path": "res://assets/terrain/stone_01.png",
+  "frame_size": [
+    64,
+    32
+  ],
+  "pivot": [
+    32,
+    16
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "69da44aa456bd1334e8246d2e8e0f52ef6be2018c0205fdbcd0e7ce53fb08f64",
+  "terrain_kind": "stone"
+}

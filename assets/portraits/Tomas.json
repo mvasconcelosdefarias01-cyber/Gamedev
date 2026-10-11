@@ -1,0 +1,28 @@
+{
+  "id": "portrait_Tomas",
+  "path": "res://assets/portraits/Tomas.png",
+  "frame_size": [
+    80,
+    80
+  ],
+  "pivot": [
+    40,
+    40
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "12a049b1967d0f5a6c7c556e944dd631f5b3321e57e9bb0eb0af213b1dfa404b"
+}

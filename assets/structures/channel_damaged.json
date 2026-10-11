@@ -1,0 +1,33 @@
+{
+  "id": "channel_damaged",
+  "path": "res://assets/structures/channel_damaged.png",
+  "frame_size": [
+    64,
+    32
+  ],
+  "pivot": [
+    32,
+    16
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "4d99fee3d7be77f398cca1814ac3d97bb41d6f7e153c114b8cbcb88b7c6fe813",
+  "footprint_tiles": [
+    1,
+    1
+  ],
+  "structure_state": "damaged"
+}

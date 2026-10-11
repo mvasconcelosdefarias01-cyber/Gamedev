@@ -1,0 +1,33 @@
+{
+  "id": "workshop_restored",
+  "path": "res://assets/structures/workshop_restored.png",
+  "frame_size": [
+    160,
+    144
+  ],
+  "pivot": [
+    80,
+    135
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "4ca527b28a0611f1afb77264c54108ddd8a585a20d3c817cb8cc75fbd6b05fc0",
+  "footprint_tiles": [
+    3,
+    2
+  ],
+  "structure_state": "restored"
+}

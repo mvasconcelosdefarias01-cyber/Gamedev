@@ -1,0 +1,28 @@
+{
+  "id": "action_harvest",
+  "path": "res://assets/ui/action_harvest.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    12,
+    12
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "3a166bab892275a188f12d14b8aa6a204b522b97577c781583e856203e1e8492"
+}

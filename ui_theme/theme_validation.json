@@ -1,0 +1,37 @@
+{
+  "godot": "4.6.3",
+  "resource_import": "passed",
+  "accent_support": [
+    "á",
+    "ã"
+  ],
+  "theme_preview_scene_load": "passed",
+  "contrast_ink_paper": 10.54,
+  "contrast_disabled": 5.34,
+  "scope": "Technical resource checks only; integrated screenshots and human playtests pending.",
+  "rendered_component_preview": {
+    "file": "ui_theme/theme_preview.png",
+    "resolution": "1280x720",
+    "renderer": "Mesa llvmpipe OpenGL 4.5 / Godot Compatibility",
+    "inspection": "Buttons, selected tabs, disabled cost message, accents and panel text legible; no clipping in this component scene."
+  },
+  "high_contrast_resource_load": "passed",
+  "minimap": {
+    "compilation": "passed",
+    "rendered_sizes": [
+      [
+        180,
+        112
+      ],
+      [
+        270,
+        168
+      ]
+    ],
+    "description_checks": [
+      "player position",
+      "destination name"
+    ],
+    "visual_inspection": "Passed static renders; player circle/destination cross/locked sector hatch distinguishable."
+  }
+}

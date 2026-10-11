@@ -1,0 +1,29 @@
+{
+  "id": "prop_sack",
+  "path": "res://assets/decoration/sack.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "sha256": "7aac125a42e649378ddf5c81f0c5ac478f2294ca522a3c23827ab69bb345d84e",
+  "decorative": true
+}
