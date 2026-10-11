@@ -24,6 +24,8 @@
   "directions": [],
   "filter": "nearest",
   "license": "CC0-1.0",
-  "sha256": "3a02cc62ab982adeaa7f69302ef59aa5fe48b1dedc7e56dcc2e89f75262b8eb3",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "a3e39e22e067ce79a7329733f6d7aba071d8624269ad5826ae6404b4fcc50790",
   "terrain_kind": "water"
 }

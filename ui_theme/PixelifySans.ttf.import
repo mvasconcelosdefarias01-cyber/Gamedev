@@ -2,18 +2,18 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ck4hjdtgwlrvq"
-path="res://.godot/imported/DejaVuSans.ttf-5b0ad1d000dfed5da3f7d0f44a10754b.fontdata"
+uid="uid://bex3p1tcp8rjw"
+path="res://.godot/imported/PixelifySans.ttf-98754521617de50bcc4d50ac6bea9356.fontdata"
 
 [deps]
 
-source_file="res://ui_theme/DejaVuSans.ttf"
-dest_files=["res://.godot/imported/DejaVuSans.ttf-5b0ad1d000dfed5da3f7d0f44a10754b.fontdata"]
+source_file="res://ui_theme/PixelifySans.ttf"
+dest_files=["res://.godot/imported/PixelifySans.ttf-98754521617de50bcc4d50ac6bea9356.fontdata"]
 
 [params]
 
 Rendering=null
-antialiasing=1
+antialiasing=0
 generate_mipmaps=false
 disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
@@ -23,8 +23,8 @@ allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false
 hinting=1
-subpixel_positioning=4
-keep_rounding_remainders=true
+subpixel_positioning=0
+keep_rounding_remainders=false
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

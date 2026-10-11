@@ -24,6 +24,8 @@
   "directions": [],
   "filter": "nearest",
   "license": "CC0-1.0",
-  "sha256": "128a05c0772b0ae0507d8048fd0f892904d04c0630fcbbdd1c86eaa370d55258",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "f35f931e0a515d7ee53173257785bb76ad9b78e43f2f818b10cba7569845c4c2",
   "terrain_kind": "stone"
 }

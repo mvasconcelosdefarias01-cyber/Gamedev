@@ -5,20 +5,13 @@ import argparse, hashlib, json, math, random, subprocess, wave
 from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
+from palette import COLORS as PAL, RAMPS, RGB, ALL_RGB, nearest
 
 ROOT = Path(__file__).resolve().parents[2]
 TOOL = Path(__file__).resolve().parent
 OUT = ROOT / 'assets'
 PREVIEW = TOOL / 'preview'
 SOURCE = TOOL / 'source'
-PAL = {'ink':'#243C47','paper':'#F7F4EB','soil':'#AA865F','soil_light':'#C6A57B',
-       'soil_dark':'#806044','leaf':'#80916C','leaf_light':'#A8B883','leaf_dark':'#536B50',
-       'gold':'#E2B55F','gold_light':'#F2D890','gold_dark':'#AE7B44',
-       'water':'#6B9293','water_light':'#A8C9C4','water_dark':'#497578',
-       'wood':'#B58A65','wood_light':'#D7AF81','wood_dark':'#745740',
-       'stone':'#9BA6A2','stone_light':'#D6D8C9','stone_dark':'#6A7B78',
-       'skin':'#D9AC88','skin_light':'#EDD0AA','shirt':'#B5715E','shirt_dark':'#814B47',
-       'blue':'#7694B7','linen':'#E0E0CE','violet':'#B2ABC2'}
 ASSETS = {}
 DIRS = ['S','SW','W','NW','N','NE','E','SE']
 
@@ -39,40 +32,109 @@ def export(asset_id,path,frames,pivot,animations=None,directions=None,extra=None
     cols=len(frames)//rows
     w,h=frames[0].size
     sheet=canvas(w*cols,h*rows)
-    for i,f in enumerate(frames): sheet.alpha_composite(f,((i%cols)*w,(i//cols)*h))
+    for i,f in enumerate(frames): sheet.alpha_composite(palette_frame(f, path),((i%cols)*w,(i//cols)*h))
     dest=OUT/path;dest.parent.mkdir(parents=True,exist_ok=True);sheet.save(dest,optimize=True)
     meta={'id':asset_id,'path':'res://assets/'+path,'frame_size':[w,h],'pivot':list(pivot),
           'columns':cols,'rows':rows,'frame_count':len(frames),
           'animations':animations or {'idle':{'frames':[0],'fps':1,'loop':False}},
           'directions':directions or [],'filter':'nearest','license':'CC0-1.0',
+          'source':'tools/north_asset_forge_2d/forge.py','palette':'palette.py:COLORS',
           'sha256':hashlib.sha256(dest.read_bytes()).hexdigest()}
     if extra:meta.update(extra)
     ASSETS[asset_id]=meta
     dest.with_suffix('.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
     return sheet
 
+def palette_frame(frame, path):
+    """Use only master colors; soften silhouette edges toward material shadows."""
+    result=frame.copy().convert('RGBA');pix=result.load();w,h=result.size
+    source=frame.convert('RGBA').load();ink=RGB['ink']
+    cache={}
+    for y in range(h):
+        for x in range(w):
+            r,g,b,a=source[x,y]
+            if not a:continue
+            rgb=(r,g,b)
+            if rgb==ink and not path.startswith(('terrain/','ui/')):
+                neighbors=[source[nx,ny][:3] for nx,ny in ((x+1,y),(x-1,y),(x,y+1),(x,y-1)) if 0<=nx<w and 0<=ny<h and source[nx,ny][3]>0 and source[nx,ny][:3]!=ink]
+                outer=any(not(0<=nx<w and 0<=ny<h) or source[nx,ny][3]==0 for nx,ny in ((x+1,y),(x-1,y),(x,y+1),(x,y-1)))
+                if neighbors and outer:
+                    rgb=RGB['shadow_violet'] if y<h*.55 and x<w*.6 else RGB['shadow']
+            if rgb not in ALL_RGB:
+                if rgb not in cache:cache[rgb]=nearest(rgb)
+                rgb=cache[rgb]
+            pix[x,y]=(*rgb,a)
+    return result
+
 def diamond(draw,c,edge='soil_dark',offset=0):
     pts=[(31,offset),(63,15+offset),(32,31+offset),(0,16+offset)]
     poly(draw,pts,c);line(draw,pts+[pts[0]],edge)
 
 def tile(kind,index=0):
-    im=canvas(64,32);d=ImageDraw.Draw(im);rng=random.Random(1000+index)
-    color={'grass':'leaf','path':'soil_light','soil':'soil','water':'water','stone':'stone'}[kind]
-    diamond(d,color,{'grass':'leaf_dark','path':'soil','soil':'soil_dark','water':'water_dark','stone':'stone_dark'}[kind])
-    if kind=='soil':
-        for k in range(4):line(d,[(10+k*7,15-k*3),(31+k*7,25-k*3)],'soil_dark')
-        for k in range(3):line(d,[(12+k*7,13-k*3),(29+k*7,21-k*3)],'soil_light')
+    im=canvas(64,32);d=ImageDraw.Draw(im);rng=random.Random(1000+index*37+sum(map(ord,kind))*101)
+    top={'grass':'leaf','path':'soil_light','soil':'soil','wet':'wet_mid','water':'water','stone':'stone'}[kind]
+    dark={'grass':'leaf_dark','path':'soil_mid','soil':'soil_dark','wet':'wet_dark','water':'water_dark','stone':'stone_dark'}[kind]
+    light={'grass':'leaf_light','path':'soil_sun','soil':'soil_light','wet':'wet_light','water':'water_light','stone':'stone_light'}[kind]
+    diamond(d,top,dark if kind in ('soil','wet') else top)
+    # Bare ground keeps a rim; continuous terrain does not expose a tile grid.
+    if kind in ('soil','wet'):
+        line(d,[(0,16),(31,0),(63,15)],light)
+        line(d,[(63,16),(32,31),(0,17)],dark)
+    if kind in ('soil','wet'):
+        for k in range(4):
+            sx=8+k*8+(index+k)%3;sy=16-k*3
+            line(d,[(sx,sy),(sx+21,sy+9)],dark,2)
+            line(d,[(sx+1,sy-2),(sx+17,sy+5)],light)
+        if kind=='wet':
+            for x,y in [(20+index,20),(38-index,13),(43,20)]:line(d,[(x,y),(x+3,y-1)],'wet_glint')
     elif kind=='water':
-        for x,y in [(15,14),(34,10),(33,23),(48,17)]:line(d,[(x,y),(x+7,y)],'water_light')
+        for k in range(4):
+            x=11+k*10+(index*3+k)%4;y=13+((index*7+k*5)%10)-k
+            line(d,[(x,y),(x+4+(k%2)*2,y)],'water_light')
+            rect(d,(x,y-1,x+1,y-1),'water_sun')
+    elif kind=='grass':
+        for k in range(index//2):
+            x=rng.randrange(17,44);y=rng.randrange(11,19)
+            if abs(x-32)/32+abs(y-16)/16<.55:
+                poly(d,[(x-5,y),(x-2,y-2),(x+4,y-1),(x+7,y+1),(x+2,y+3),(x-4,y+2)],'leaf_mid' if k%2 else 'leaf_light')
+                line(d,[(x-2,y-2),(x+2,y-2)],'leaf_sun')
+        for k in range([1,2,3,1,2,3][index%6]):
+            x=rng.randrange(12,51);y=rng.randrange(9,23)
+            if abs(x-32)/32+abs(y-16)/16<.78:
+                line(d,[(x,y),(x-1,y-3)],'leaf_light')
+                line(d,[(x,y),(x+2,y-2)],'leaf_dark')
+        for k in range(index%3):
+            x=rng.randrange(14,49);y=rng.randrange(10,22)
+            if abs(x-32)/32+abs(y-16)/16<.7:rect(d,(x,y,x+2,y),'leaf_mid')
+    elif kind=='path':
+        for k in range(index%3):
+            x=rng.randrange(18,45);y=rng.randrange(11,19)
+            if abs(x-32)/32+abs(y-16)/16<.55:
+                poly(d,[(x-3,y),(x,y-2),(x+4,y),(x+2,y+2)],'soil')
+                line(d,[(x-3,y),(x,y-2)],'soil_sun')
+        for k in range(1+index%3):
+            x=rng.randrange(14,49);y=rng.randrange(10,22)
+            if abs(x-32)/32+abs(y-16)/16<.75:rect(d,(x,y,x+2+(k%2),y+1),'soil')
     else:
-        for _ in range(11):
-            x=rng.randrange(10,54);y=rng.randrange(7,25)
-            if abs(x-32)/32+abs(y-16)/16<.85:rect(d,(x,y,x+1,y),{'grass':'leaf_light','path':'soil','stone':'stone_light'}[kind])
+        for k in range(4):
+            x=rng.randrange(12,49);y=rng.randrange(10,22)
+            if abs(x-32)/32+abs(y-16)/16<.7:
+                poly(d,[(x,y),(x+3,y-2),(x+6,y),(x+4,y+2)],'stone_mid')
+                line(d,[(x,y),(x+3,y-2)],'stone_light')
+    if kind in ('grass','path','water','stone'):
+        # One-pixel bleed covers raster gaps between adjacent isometric diamonds.
+        source=im.copy().load();pix=im.load()
+        for y in range(32):
+            for x in range(64):
+                if source[x,y][3]:continue
+                if any(0<=x+dx<64 and 0<=y+dy<32 and source[x+dx,y+dy][3]
+                       for dx,dy in ((-1,0),(1,0),(0,-1),(0,1))):pix[x,y]=rgba(top)
     return im
 
 def crop(crop_id,stage,phase=0):
     im=canvas(32,40);d=ImageDraw.Draw(im)
     ell(d,(7,32,25,38),(36,60,71,70))
+    ell(d,(10,34,22,37),(77,69,101,35))
     if stage==0:
         ell(d,(13,30,19,34),'soil_light');rect(d,(15,29,16,30),'wood_dark');return im
     if stage==1:
@@ -132,6 +194,11 @@ def crop(crop_id,stage,phase=0):
             poly(d,[(21,13+shift),(26,13+shift),(29,21+shift),(20,21+shift)],'ink')
             poly(d,[(22,14+shift),(25,14+shift),(27,19+shift),(21,19+shift)],'linen')
             rect(d,(22,20+shift,26,21+shift),'water_light');rect(d,(24,22+shift,24,23+shift),'gold')
+    if stage>=3:
+        # One shared glint rule, placed on each crop's own harvestable feature.
+        glints={'C1':(13,26),'C2':(23+shift,18),'C3':(18,20),
+                'C4':(14,25),'C5':(16,7+shift),'C6':(23,14+shift)}
+        gx,gy=glints[crop_id];rect(d,(gx,gy,gx+1,gy),'gold_sun')
     return im
 
 def crop_icon(crop_id):
@@ -171,6 +238,7 @@ def actor(direction,state,frame,shirt='shirt',npc=None,echo=False):
     bob=[0,0,-1,-1,0,0][frame%6] if state=='walk' else (-1 if state=='idle' and frame==1 else 0)
     cx=16;cy=29+bob
     ell(d,(7,42,26,47),(36,60,71,75))
+    ell(d,(10,43,23,46),(77,69,101,38))
     leg_a=[0,2,2,0,-2,-2][frame%6] if state=='walk' else 0
     rect(d,(11+leg_a,34,14+leg_a,43),'ink');rect(d,(18-leg_a,34,21-leg_a,43),'ink')
     rect(d,(10+leg_a,43,15+leg_a,46),'wood_dark');rect(d,(17-leg_a,43,22-leg_a,46),'wood_dark')
@@ -265,6 +333,7 @@ def machine(kind,frame):
     im=canvas(w,h);d=ImageDraw.Draw(im)
     cx=w//2
     ell(d,(cx-12,h-9,cx+12,h-2),(36,60,71,80))
+    ell(d,(cx-8,h-7,cx+8,h-3),(77,69,101,40))
     if kind=='sprinkler':
         poly(d,[(8,24),(16,20),(25,24),(16,29)],'ink')
         poly(d,[(9,24),(16,22),(23,24),(16,27)],'stone')
@@ -301,7 +370,8 @@ def machine(kind,frame):
 def save_manifest():
     OUT.mkdir(parents=True,exist_ok=True)
     payload={'schemaVersion':1,'project':'Fazenda Entre Ecos','producer':'North Asset Forge 2D — local original project',
-             'source':'tools/north_asset_forge_2d/forge.py','license':'CC0-1.0','palette':PAL,'assets':ASSETS}
+             'source':'tools/north_asset_forge_2d/forge.py','license':'CC0-1.0','palette':PAL,
+             'ramps':RAMPS,'assets':ASSETS}
     (OUT/'manifest.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n')
 
 def contact_sample():
@@ -353,12 +423,7 @@ def sample():
         frames=[actor(direction,st,i,col) for direction in DIRS for st,n,_ in states for i in range(n)]
         export('player'+tag,'characters/player'+tag+'.png',frames,(16,47),player_anims,DIRS)
     export('plot_empty','terrain/plot_empty.png',[tile('soil')],(32,16))
-    wet=tile('soil');wp=wet.load()
-    for y in range(32):
-        for x in range(64):
-            r,g,b,a=wp[x,y]
-            if a:wp[x,y]=(int(r*.77),int(g*.78),int(b*.80),a)
-    export('plot_wet','terrain/plot_wet.png',[wet],(32,16))
+    export('plot_wet','terrain/plot_wet.png',[tile('wet')],(32,16))
     for k in ['dry','mature','memory','pause','coin','check']:export('state_'+k,'ui/state_'+k+'.png',[state_icon(k)],(8,8))
     export('machine_sprinkler','machines/sprinkler.png',[machine('sprinkler',i) for i in range(5)],(16,28),
            {'idle':{'frames':[0],'fps':1,'loop':False},'active':{'frames':[1,2,3,4],'fps':8,'loop':True}})
@@ -472,10 +537,11 @@ def structure(kind,restored=True):
         im.alpha_composite(state_icon('memory'),(22,23))
     return im
 
-def prop(kind):
+def prop(kind,variant=0):
     size=(80,96) if kind in ('tree_oak','tree_fruit') else ((64,64) if kind=='scarecrow' else (48,48))
     im=canvas(*size);d=ImageDraw.Draw(im);w,h=size;cx=w//2
     ell(d,(cx-16,h-9,cx+16,h-2),(36,60,71,55))
+    ell(d,(cx-10,h-7,cx+10,h-3),(77,69,101,30))
     if kind.startswith('tree'):
         rect(d,(34,44,43,90),'wood_dark');rect(d,(34,44,37,88),'wood')
         line(d,[(37,62),(24,49)],'wood_dark',4)
@@ -546,6 +612,63 @@ def prop(kind):
     elif kind=='sign':
         for x in [9,36]:rect(d,(x,24,x+3,45),'wood_dark')
         outline(d,(3,9,44,27),fill='wood_light');line(d,[(8,16),(39,16)],'wood_dark');line(d,[(14,21),(34,21)],'leaf_dark')
+    if variant:
+        if kind.startswith('tree'):
+            # Leaf-tip sway only: trunk/pivot remain fixed.
+            for x,y in [(20,28),(53,17),(67,42),(37,15)]:
+                rect(d,(x+variant,y,x+variant+3,y+1),'leaf_sun')
+            line(d,[(43,47),(50+variant,36)],'leaf_mid',2)
+        elif kind in ('grass','fern','bush'):
+            for x,y in [(14,31),(25,22),(34,29)]:line(d,[(x,y),(x+variant,y-4)],'leaf_sun')
+        elif kind in ('bird','butterfly'):
+            if kind=='bird':poly(d,[(18,29),(21,16-variant),(27,27)],'stone_light')
+            else:
+                ell(d,(12,14-variant,21,22),'gold_sun');ell(d,(27,14-variant,36,22),'gold')
+        elif kind in ('rock','smallrock'):
+            poly(d,[(11,34),(17,22),(23,24),(19,32)],'stone_light')
+        elif kind in ('crate','barrel','log','stump'):
+            line(d,[(18,24),(28,19)],'wood_sun',2)
+    return im
+
+def ui_panel(high_contrast=False):
+    im=canvas(24,24);d=ImageDraw.Draw(im)
+    rect(d,(0,0,23,23),'shadow_violet' if high_contrast else 'wood_dark')
+    rect(d,(1,1,22,21),'paper');rect(d,(2,2,21,20),'cream')
+    line(d,[(2,2),(21,2)],'wood_sun');line(d,[(2,2),(2,20)],'wood_light')
+    line(d,[(3,21),(21,21)],'wood_mid');line(d,[(21,3),(21,21)],'wood_mid')
+    for p in [(3,3),(20,3),(3,19),(20,19)]:rect(d,(*p,*p),'gold_dark')
+    if high_contrast:rect(d,(4,4,19,18),'paper')
+    for x,y in [(0,0),(23,0),(0,23),(23,23)]:im.putpixel((x,y),(0,0,0,0))
+    return im
+
+def tiny_ui_icon(kind,locked=False):
+    src=ui_icon(kind) if kind not in ('coin','pause') else state_icon(kind).resize((24,24),Image.Resampling.NEAREST)
+    im=src.resize((16,16),Image.Resampling.NEAREST)
+    if locked:
+        pix=im.load()
+        for y in range(16):
+            for x in range(16):
+                if pix[x,y][3]:pix[x,y]=rgba('stone_mid',pix[x,y][3])
+        d=ImageDraw.Draw(im);outline(d,(8,8,14,14),'shadow',fill='stone_light')
+        line(d,[(10,8),(10,5),(13,5),(13,8)],'shadow')
+    return im
+
+def particle(kind,frame):
+    im=canvas(16,16);d=ImageDraw.Draw(im)
+    dx=frame%3-1;dy=frame//2
+    if kind=='seed':
+        ell(d,(6+dx,4+dy,9+dx,7+dy),'soil_mid')
+        rect(d,(7+dx,4+dy,8+dx,4+dy),'gold_light')
+    elif kind=='water':
+        poly(d,[(8+dx,2+dy),(4+dx,10+dy),(6+dx,13+dy),(10+dx,13+dy),(12+dx,10+dy)],'water')
+        rect(d,(6+dx,9+dy,7+dx,10+dy),'water_sun')
+    elif kind=='harvest':
+        line(d,[(8,2+dy),(8,13+dy)],'gold')
+        line(d,[(2+dx,8),(14+dx,8)],'gold_light')
+        rect(d,(7,7,9,9),'gold_sun')
+    else:
+        ell(d,(5+dx,7+dy,10+dx,9+dy),'soil_mid')
+        line(d,[(6+dx,7+dy),(9+dx,7+dy)],'soil_sun')
     return im
 
 def clue_icon(number):
@@ -615,7 +738,7 @@ def key_image(number):
     outline(d,(0,0,159,89))
     return im
 
-def portrait(kind):
+def portrait(kind,expression='neutral'):
     im=canvas(80,80);d=ImageDraw.Draw(im)
     ell(d,(4,4,75,75),'leaf_dark');ell(d,(6,6,73,73),'leaf_light')
     poly(d,[(12,77),(19,57),(29,51),(52,51),(62,59),(70,77)],'blue' if kind=='Lia' else 'shirt')
@@ -637,6 +760,15 @@ def portrait(kind):
         rect(d,(31,45,49,50),'wood_dark');rect(d,(36,45,43,47),'skin')
     else:
         poly(d,[(25,15),(50,15),(56,28),(20,28)],'gold_dark');rect(d,(27,14,48,23),'wood_light');rect(d,(18,26,61,30),'gold')
+    if expression=='happy':
+        line(d,[(36,47),(39,49),(43,49),(46,46)],'wood_dark',2)
+        rect(d,(31,34,34,35),'skin_dark');rect(d,(46,34,49,35),'skin_dark')
+        rect(d,(27,40,30,41),'skin_dark');rect(d,(50,40,52,41),'skin_dark')
+    elif expression=='concerned':
+        line(d,[(31,33),(35,32)],'wood_dark',2);line(d,[(45,32),(50,33)],'wood_dark',2)
+        line(d,[(38,49),(44,49)],'wood_dark',2)
+        rect(d,(28,42,30,43),'skin_dark')
+    rect(d,(28,26,34,27),'skin_light')
     return im
 
 def ui_icon(kind):
@@ -673,7 +805,7 @@ def ui_icon(kind):
 
 def full():
     sample()
-    for terrain,n in [('grass',6),('path',6),('soil',4),('water',4),('stone',4)]:
+    for terrain,n in [('grass',6),('path',6),('soil',5),('wet',5),('water',5),('stone',5)]:
         for i in range(n):export(f'terrain_{terrain}_{i+1:02}',f'terrain/{terrain}_{i+1:02}.png',[tile(terrain,i)],(32,16),extra={'terrain_kind':terrain})
     for i in range(12):
         im=tile('grass',i);d=ImageDraw.Draw(im);edge=i%4
@@ -686,7 +818,9 @@ def full():
     frames=[actor(dr,st,i,echo=True) for dr in ['NW','SE'] for st in ['water','harvest','interact'] for i in range(4)]
     export('echo_Tomas','characters/echo_Tomas.png',frames,(16,47),
            {st:{'frames':list(range(i*4,i*4+4)),'fps':4,'loop':True} for i,st in enumerate(['water','harvest','interact'])},['NW','SE'])
-    for who in ['player','Lia','Rui','Tomas']:export('portrait_'+who,'portraits/'+who+'.png',[portrait(who)],(40,40))
+    for who in ['player','Lia','Rui','Tomas']:
+        export('portrait_'+who,'portraits/'+who+'.png',[portrait(who,e) for e in ('neutral','happy','concerned')],(40,40),
+               {'neutral':{'frames':[0],'fps':1,'loop':False},'happy':{'frames':[1],'fps':1,'loop':False},'concerned':{'frames':[2],'fps':1,'loop':False}})
     for k,pivot in [('sprinkler',(16,28)),('collector',(24,36)),('seeder',(20,36))]:
         export('machine_'+k,'machines/'+k+'.png',[machine(k,i) for i in range(5)],pivot,
                {'idle':{'frames':[0],'fps':1,'loop':False},'active':{'frames':[1,2,3,4],'fps':8,'loop':True}})
@@ -700,7 +834,13 @@ def full():
             aid=k+('_'+name if name else '');export(aid,'structures/'+aid+'.png',[structure(k,rest)],pivots[k],extra={'footprint_tiles':footprints[k],'structure_state':name})
     props=['tree_oak','tree_fruit','grass','fern','rock','smallrock','stump','log','bush','fence','crate','barrel','hook','footprint','ribbon','wheel','sack','basket','bird','butterfly']
     for k in props:
-        im=prop(k);export('prop_'+k,'decoration/'+k+'.png',[im],(im.width//2,im.height-4),extra={'decorative':True})
+        im=prop(k)
+        animated=k in ('tree_oak','tree_fruit','bird','butterfly')
+        frames=[prop(k,i) for i in range(3)] if animated else [im]
+        export('prop_'+k,'decoration/'+k+'.png',frames,(im.width//2,im.height-4),
+               {'idle':{'frames':list(range(len(frames))),'fps':3 if animated else 1,'loop':animated}},extra={'decorative':True})
+        if k in ('tree_oak','tree_fruit','grass','fern','rock','smallrock','stump','log','bush','crate','barrel'):
+            export('prop_'+k+'_variant_2','decoration/'+k+'_variant_2.png',[prop(k,1)],(im.width//2,im.height-4),extra={'decorative':True,'variant':2})
     for k in ['pot','bench','banner','scarecrow','lantern','sign']:
         im=prop(k);export('cosmetic_'+k,'decoration/cosmetic_'+k+'.png',[im],(im.width//2,im.height-4),extra={'decorative':True,'coin_cost':200})
     for i in range(1,9):
@@ -709,6 +849,14 @@ def full():
     for k in ['move','interact','inspect','notebook','seed','water','harvest','sell','repair','upgrade','save','options']:
         export('action_'+k,'ui/action_'+k+'.png',[ui_icon(k)],(12,12))
     for k in ['Cultivo','Engenho','Escuta']:export('tree_'+k,'ui/tree_'+k+'.png',[ui_icon('tree_'+k)],(12,12))
+    for k in ['seed','water','harvest','sell','notebook','upgrade','inspect','options','coin','pause']:
+        export('ui16_'+k,'ui16/'+k+'.png',[tiny_ui_icon(k)],(8,8))
+        export('ui16_'+k+'_locked','ui16/'+k+'_locked.png',[tiny_ui_icon(k,True)],(8,8))
+    for k in ['normal','high_contrast']:
+        export('panel_'+k,'ui/panel_'+k+'.png',[ui_panel(k=='high_contrast')],(0,0),extra={'nine_slice_margins':[6,6,6,6]})
+    for k in ['seed','water','harvest','footstep']:
+        export('effect_'+k,'effects/'+k+'.png',[particle(k,i) for i in range(3)],(8,8),
+               {'pop':{'frames':[0,1,2],'fps':12,'loop':False}})
     for n,k in enumerate(['horta','channel','workshop','bridge','field','cistern'],1):
         img=structure(k).copy();img.thumbnail((24,24),Image.Resampling.NEAREST);icon=canvas(24,24);icon.alpha_composite(img,((24-img.width)//2,(24-img.height)//2))
         export(f'repair_R{n}',f'ui/repair_R{n}.png',[icon],(12,12))
@@ -858,13 +1006,16 @@ def validate():
         for k,anim in meta['animations'].items():
             if not anim['frames'] or any(f<0 or f>=cols for f in anim['frames']):errors.append(aid+': animation '+k)
         if not np.asarray(img)[:,:,3].max():errors.append(aid+': empty image')
-        if not meta['id'].startswith('key_') and not (np.asarray(img)[:,:,3]==0).any():errors.append(aid+': missing real transparency')
+        pixels=np.asarray(img)
+        if not meta['id'].startswith('key_') and not (pixels[:,:,3]==0).any():errors.append(aid+': missing real transparency')
+        used={tuple(v) for v in np.unique(pixels[pixels[:,:,3]>0,:3],axis=0)}
+        if not used.issubset(ALL_RGB):errors.append(aid+': outside master palette')
     required={**{f'crop_C{i}':5 for i in range(1,7)},'player':200,'npc_Lia':20,'npc_Rui':20,'echo_Tomas':24,
               'machine_sprinkler':5,'machine_collector':5,'machine_seeder':5}
     for aid,num in required.items():
         if aid not in manifest['assets']:errors.append(aid+': missing required inventory')
         elif manifest['assets'][aid].get('frame_count')!=num:errors.append(aid+': required frame count')
-    prefix_counts={'terrain_':24,'border_':12,'icon_crop_':6,'portrait_':4,'clue_':8,'key_':8,'tree_':3,'repair_':6,'action_':12,'cosmetic_':6,'prop_':20}
+    prefix_counts={'terrain_':32,'border_':12,'icon_crop_':6,'portrait_':4,'clue_':8,'key_':8,'tree_':3,'repair_':6,'action_':12,'cosmetic_':6,'prop_':31,'ui16_':20,'effect_':4,'panel_':2}
     for prefix,count in prefix_counts.items():
         actual=sum(k.startswith(prefix) for k in manifest['assets'])
         if actual!=count:errors.append(prefix+': inventory '+str(actual)+' expected '+str(count))
@@ -878,7 +1029,7 @@ def validate():
         a=manifest['assets'].get(st+'_damaged');b=manifest['assets'].get(st+'_restored')
         if a and b and any(a[k]!=b[k] for k in ['pivot','frame_size','footprint_tiles']):errors.append(st+': repair changes footprint')
     report={'passed':not errors,'raster_assets':raster,'audio_assets':audio_count,'raster_frames_including_shirts':frames,
-            'errors':errors,'checks':['PNG bytes and RGBA','real transparency','sheet dimensions','animation indices','pivot bounds','stable repair footprints','SHA-256','audio decoding','audio duration','decoded PCM peak below clipping'],
+            'errors':errors,'checks':['PNG bytes and RGBA','master palette','real transparency','sheet dimensions','animation indices','pivot bounds','stable repair footprints','SHA-256','audio decoding','audio duration','decoded PCM peak below clipping'],
             'audio_verification':audio_checks,
             'visual_review':'sample contact sheets reviewed by art_design before full; integrated review separate','human_test':'not performed'}
     (TOOL/'validation.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')

@@ -24,6 +24,8 @@
   "directions": [],
   "filter": "nearest",
   "license": "CC0-1.0",
-  "sha256": "6852d6d5fd2fb100d9d234ce74f2509106d3d003eab39ed92cd8fc1448239160",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "80e2393296c72a4bc7d8a2d7a5c85ea38c4d6f3d714996178dca57660bd54693",
   "terrain_kind": "path"
 }

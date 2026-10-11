@@ -1,0 +1,30 @@
+{
+  "id": "ui16_seed_locked",
+  "path": "res://assets/ui16/seed_locked.png",
+  "frame_size": [
+    16,
+    16
+  ],
+  "pivot": [
+    8,
+    8
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "ded27bdd1e59bed0682b4bd437d125012d6c6fb5d0f4087781497ed242f3b96a"
+}

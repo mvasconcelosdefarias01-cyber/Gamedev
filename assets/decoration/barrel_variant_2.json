@@ -1,0 +1,32 @@
+{
+  "id": "prop_barrel_variant_2",
+  "path": "res://assets/decoration/barrel_variant_2.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "e76fea4bbf957747288c6b1d3cbc59d833288d58fc50c9a1cae54d0a358e1d43",
+  "decorative": true,
+  "variant": 2
+}

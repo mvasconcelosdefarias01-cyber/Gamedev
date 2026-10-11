@@ -154,7 +154,7 @@ Verificação automática cobre importação/metadata, contrastes, dimensões, I
 
 Agente de direção: este documento e `ui_theme/` (tema, fontes licenciadas e prévia). Assets finais, fontes editáveis/export, metadata/licenças são propriedade do agente de produção. Scripts/cenas/input/configuração são propriedade do agente programação. Root integra contratos e registra alterações de design. Usuário autorizou projeto local novo em `tools/north_asset_forge_2d/`; seus comandos reais serão documentados pelo produtor, sem reivindicar ferramenta externa preexistente.
 
-Tema reutilizável: `res://ui_theme/fazenda_theme.tres`; DejaVu Sans distribuída com licença para acentos e consistência. Não coloca lógica de progressão nos elementos gráficos. Aplicar no Control raiz de cada tela; ajustar layout/fontes conforme resolução e opções sem editar o recurso global em runtime. `ui_theme/README.md` documenta variantes.
+Tema reutilizável: `res://ui_theme/fazenda_theme.tres`; Pixelify Sans distribuída sob OFL 1.1 para acentos e consistência. Não coloca lógica de progressão nos elementos gráficos. Aplicar no Control raiz de cada tela; ajustar layout/fontes conforme resolução e opções sem editar o recurso global em runtime. `ui_theme/README.md` documenta variantes.
 
 ## Revisões realizadas
 
@@ -174,5 +174,5 @@ Componente minimapa em `ui_theme/farm_minimap.gd` implementado, compilado e rend
 
 - Aguardam protótipo: capturas da matriz, pivôs, seleção, oclusão e percurso até P3.
 - Aguardam teste humano: compreensão sem ajuda, agência com automação, espera sem tarefa, duração completa.
-- Aguardam assets finais: qualidade de arte e áudio, quantidade de frames, quatro retratos, oito imagens-chave, licenças e conteúdo visual de todas as estruturas.
+- Os assets finais, quatro retratos, oito imagens-chave, licenças e estados das estruturas foram integrados. Leitura, conforto, ritmo e áudio ainda exigem avaliação humana no dispositivo de destino.
 - Se a produção de assets não atingir o inventário do documento, registrar a diferença explicitamente na entrega; não chamar placeholder de asset final validado.

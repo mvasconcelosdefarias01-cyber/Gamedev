@@ -1,0 +1,31 @@
+{
+  "id": "terrain_soil_05",
+  "path": "res://assets/terrain/soil_05.png",
+  "frame_size": [
+    64,
+    32
+  ],
+  "pivot": [
+    32,
+    16
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "08ac3cb1c023c653c6e5883351366c1c4ce6b24d27b9a2b34a6dd05152fce706",
+  "terrain_kind": "soil"
+}

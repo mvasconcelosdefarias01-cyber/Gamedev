@@ -1,5 +1,6 @@
 class_name FarmWorld
 extends Node2D
+const PIXEL_FONT = preload("res://ui_theme/PixelifySans.ttf")
 var sim: FarmSimulation
 var preferences: Dictionary = {}
 var camera_tile = Vector2(14,34)
@@ -81,11 +82,11 @@ func sheet(path: String, tile: Vector2, frame: int, frame_size: Vector2, pivot: 
 	var rect=Rect2(Vector2((frame%cols)*frame_size.x,int(frame/cols)*frame_size.y),frame_size)
 	draw_texture_rect_region(tex,Rect2(screen(tile)-pivot*zoom,frame_size*zoom),rect,tint)
 func label_at(tile: Vector2, text: String, color: Color = Color("243c47"), offset: Vector2 = Vector2.ZERO) -> void:
-	var font=ThemeDB.fallback_font
+	var font=PIXEL_FONT
 	var p=screen(tile)+offset
-	var size=12
+	var size=14
 	var w=font.get_string_size(text,HORIZONTAL_ALIGNMENT_LEFT,-1,size).x
-	draw_rect(Rect2(p+Vector2(-w/2-3,-12),Vector2(w+6,16)),Color("f7f4eb"))
+	draw_rect(Rect2(p+Vector2(-w/2-3,-14),Vector2(w+6,19)),Color("f7f4eb"))
 	draw_string(font,p+Vector2(-w/2,0),text,HORIZONTAL_ALIGNMENT_LEFT,-1,size,color)
 func diamond(tile: Vector2, color: Color, outline: Color = Color.TRANSPARENT, inset: float = 0.0) -> void:
 	var p=screen(tile)
@@ -159,12 +160,13 @@ func _draw() -> void:
 		for x in range(48):
 			var tile=Vector2(x,y)
 			if not visible(tile,40): continue
-			var path="assets/terrain/grass_%02d.png" % ((x*13+y*7)%6+1)
+			var variation=posmod(x*73856093 ^ y*19349663 ^ x*y*83492791,6)+1
+			var path="assets/terrain/grass_%02d.png" % variation
 			var tex=texture(path)
 			if tex!=null: draw_texture_rect(tex,Rect2(screen(tile)-Vector2(32,16)*zoom,Vector2(64,32)*zoom),false)
 			else: diamond(tile,Color("80916c").lightened(0.04*((x+y)%3)),Color("798763"))
 			if (x>=5 and x<=17 and y>=26 and y<=40) or (x>=18 and x<=20 and y>=25):
-				draw_asset("terrain_path_%02d" % ((x+y)%6+1),tile)
+				draw_asset("terrain_path_%02d" % (posmod(x*53 ^ y*97,6)+1),tile)
 	# Short, readable channels connect each productive block.
 	if sim.has("R2"):
 		for bid in GameData.BLOCKS:
@@ -178,18 +180,19 @@ func _draw() -> void:
 	for y in range(13,19):
 		for x in range(4,10):
 			var t=Vector2(x,y)
-			if t.distance_to(Vector2(7,16))<3 and visible(t): diamond(t,Color("6b9293"),Color("a8c9c4"))
+			if t.distance_to(Vector2(7,16))<3 and visible(t): draw_asset("terrain_water_%02d" % (posmod(x*3+y*5+int(clock*2) if not preferences.get("reduced_motion",false) else x*3+y*5,5)+1),t)
 	var drawables=[]
 	for prop in props:
 		if visible(prop.tile): drawables.append({"kind":"prop","asset":prop.asset,"tile":prop.tile,"depth":iso(prop.tile).y})
 	for p in sim.state.plots:
 		var tile=GameData.plot_tile(p.id)
 		if not visible(tile): continue
-		diamond(tile,Color("625142") if p.state=="locked" else Color("aa865f"),Color("d1b590"),2)
+		if p.state=="locked": diamond(tile,Color("625142"),Color("d1b590"),2)
+		elif p.state in ["growing","mature"]: draw_asset("plot_wet",tile)
+		else: draw_asset("terrain_soil_%02d" % (posmod(int(tile.x)*71 ^ int(tile.y)*137,5)+1),tile)
 		if p.state=="locked":
 			draw_line(screen(tile)+Vector2(-13,0)*zoom,screen(tile)+Vector2(13,0)*zoom,Color("80916c"),4*zoom)
 		else:
-			for i in [-1,0,1]: draw_line(screen(tile)+Vector2(-12,i*5)*zoom,screen(tile)+Vector2(12,i*5)*zoom,Color("795b42"),1*zoom)
 			if not str(p.crop).is_empty(): drawables.append({"kind":"crop","tile":tile,"plot":p,"depth":iso(tile).y})
 		if p.id in preview_plots: diamond(tile,Color(1,1,1,0.08),Color("f7f4eb") if player_tile.distance_to(tile)<=1.0 else Color("e2b55f"),1)
 		if inspected or not str(sim.state.blocks[p.block].armed_pattern).is_empty(): label_at(tile,p.position,Color("243c47"),Vector2(0,12)*zoom)
@@ -230,7 +233,6 @@ func _draw() -> void:
 					var c=screen(d.tile)+Vector2(0,-26)*zoom
 					draw_arc(c,3*zoom,0,TAU,12,Color("f7f4eb"),1*zoom)
 					draw_line(c+Vector2(-3,-1)*zoom,c+Vector2(0,-7)*zoom,Color("f7f4eb"),1*zoom); draw_line(c+Vector2(3,-1)*zoom,c+Vector2(0,-7)*zoom,Color("f7f4eb"),1*zoom)
-				if p.state=="mature": label_at(d.tile,"✓",Color("243c47"),Vector2(0,-42)*zoom)
 			"station": _draw_station(d.station,d.tile)
 			"machine":
 				var size={"sprinkler":Vector2(32,32),"collector":Vector2(48,40),"seeder":Vector2(40,40)}[d.machine]
@@ -246,7 +248,10 @@ func _draw() -> void:
 					if meta.has("frame_size"):
 						var rect=Rect2(screen(d.tile)-Vector2(meta.pivot[0],meta.pivot[1])*zoom,Vector2(meta.frame_size[0],meta.frame_size[1])*zoom)
 						if rect.has_point(screen(player_tile)-Vector2(0,20)*zoom): tint.a=0.35
-				draw_asset(d.asset,d.tile,0,tint)
+				var variant=d.asset
+				if d.kind=="prop" and manifest.has(d.asset+"_variant_2") and posmod(int(d.tile.x)*31 ^ int(d.tile.y)*79,2)==1: variant=d.asset+"_variant_2"
+				var animated=d.asset in ["prop_tree_oak","prop_tree_fruit","prop_bird","prop_butterfly"] and not preferences.get("reduced_motion",false) and variant==d.asset
+				draw_asset(variant,d.tile,int(clock*3+int(d.tile.x))%3 if animated else 0,tint)
 			"player":
 				var start=0; var count=2
 				if moving: start=2; count=6
@@ -292,11 +297,14 @@ func _draw() -> void:
 	if not preferences.get("reduced_particles",false):
 		for effect in action_effects:
 			var p=screen(effect.tile);var progress=1-effect.life/effect.duration
+			var effect_id="effect_"+str(effect.kind)
+			if manifest.has(effect_id): draw_asset(effect_id,effect.tile,mini(2,int(progress*3)))
 			if effect.kind=="water":
 				for i in range(4):draw_circle(p+Vector2(-12+i*8,-24+progress*24)*zoom,1.5*zoom,Color("a8c9c4"))
 			elif effect.kind=="harvest":draw_arc(p,16*zoom,-PI+progress,-0.2+progress,12,Color("f2d890"),2*zoom)
 			else:
 				for i in range(3):draw_circle(p+Vector2(-6+i*6,-progress*8)*zoom,1.0*zoom,Color("806044"))
+		if moving and int(clock*10)%3==0: draw_asset("effect_footstep",player_tile,int(clock*12)%3,Color(1,1,1,0.65))
 	for e in effects:
 		var offset=Vector2(0,-30-(1.5-e.life)*15)
 		if preferences.get("reduced_motion",false): offset=Vector2(0,-36)

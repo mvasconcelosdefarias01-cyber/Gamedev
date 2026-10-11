@@ -23,7 +23,7 @@ func run() -> void:
 	check(not FileAccess.file_exists("res://tools/north_asset_forge_2d/forge.py"),"production source excluded from playable package")
 	check(FileAccess.file_exists("res://assets/LICENSE.txt") and FileAccess.file_exists("res://ui_theme/FONT_LICENSE.txt"),"asset and font licenses included")
 	var manifest=JSON.parse_string(FileAccess.get_file_as_string("res://assets/manifest.json"))
-	check(manifest is Dictionary and manifest.assets.size()==181,"complete manifest in package")
+	check(manifest is Dictionary and manifest.assets.size()==226,"complete manifest in package")
 	for id in manifest.assets:
 		var path=manifest.assets[id].path
 		check(ResourceLoader.exists(path) and load(path)!=null,"packaged resource loads: "+id)

@@ -1,0 +1,36 @@
+{
+  "id": "panel_normal",
+  "path": "res://assets/ui/panel_normal.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    0,
+    0
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "9349ea2f420de382795f9b84ef10a8e6d8b76b8aba01841aa42dc85edc6b595f",
+  "nine_slice_margins": [
+    6,
+    6,
+    6,
+    6
+  ]
+}

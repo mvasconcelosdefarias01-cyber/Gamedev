@@ -1,0 +1,32 @@
+{
+  "id": "prop_crate_variant_2",
+  "path": "res://assets/decoration/crate_variant_2.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "e682bf34cd6b5934e259aef9bf8f325e910f8f6222b65e49fd7cd86d54e64f61",
+  "decorative": true,
+  "variant": 2
+}

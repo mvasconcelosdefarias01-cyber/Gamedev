@@ -4,15 +4,15 @@ Jogo local em português para PC, feito em Godot 4.6.3 / GDScript: cultivo, rest
 
 ## Jogar
 
-Downloads pelo GitHub: [projeto Godot (Código → Download ZIP)](https://github.com/mvasconcelosdefarias01-cyber/Gamedev) e [pacote executável para Windows 11](https://github.com/mvasconcelosdefarias01-cyber/Gamedev/raw/windows-11-build/artifacts/FazendaEntreEcos-Windows11.zip). O SHA-256 do pacote Windows é `66c90727d3833a485ea42ec2b709c95479335fae6f560409596c01bc334475bb`.
+Downloads pelo GitHub: [projeto Godot atualizado (Código → Download ZIP)](https://github.com/mvasconcelosdefarias01-cyber/Gamedev) e [pacote executável atualizado para Windows 11](https://github.com/mvasconcelosdefarias01-cyber/Gamedev/raw/windows-11-visual/artifacts/FazendaEntreEcos-Windows11-visual.zip). O SHA-256 do ZIP Windows é `7cf30cb45b68ebd4d5dd7f7d71d810291d81feb68f7760c6f95fe2d06f3c2763`.
 
 No Windows 11 (64 bits), use o pacote Windows: extraia os arquivos na mesma pasta e abra `FazendaEntreEcos.exe`. O `FazendaEntreEcos.pck` precisa ficar ao lado do executável; Godot 4.6.3 está incluído. Por ser uma distribuição local sem assinatura digital, o Windows pode pedir confirmação na primeira abertura. Os saves ficam em `%APPDATA%\Godot\app_userdata\Fazenda Entre Ecos\saves`.
 
-Se o ZIP do Windows for grande demais para baixar pela interface, pegue suas partes `.part00` a `.part04`, coloque todas na mesma pasta e use o comando de remontagem que acompanha a entrega. Depois extraia o ZIP resultante. Quem já tem Godot 4.6.3 no Windows pode baixar só o PCK de 1,5 MB e abri-lo pelo Godot, ou baixar o projeto fonte de 6,1 MB e importar `Gamedev/project.godot`.
+Se o ZIP de 80 MB falhar, use o projeto fonte pelo botão **Código → Download ZIP**: extraia, abra `Gamedev/project.godot` no Godot 4.6.3 e pressione **F5**. Quem já tem o executável Godot 4.6.3 pode baixar apenas o [PCK atualizado de 1,3 MB](https://github.com/mvasconcelosdefarias01-cyber/Gamedev/raw/main/artifacts/FazendaEntreEcos-godot4-visual.pck), SHA-256 `cf5e2f0444ac6cdd3f8fb4b92e21a5b2606a667ca3ad08ed52b2eeb06867cf08`, e executá-lo com `Godot_v4.6.3-stable_win64.exe --main-pack FazendaEntreEcos-godot4-visual.pck` no PowerShell dentro da pasta dos arquivos.
 
 No pacote Linux, extraia o ZIP e execute `./FazendaEntreEcos`. Mantenha o arquivo `FazendaEntreEcos.pck` ao lado do executável. O pacote inclui a engine oficial Godot 4.6.3 e não exige instalar Godot ou Python. Requer Linux x86_64, glibc, desktop X11/Wayland e OpenGL 3.3. Se o gerenciador de arquivos não preservar a permissão: `chmod +x FazendaEntreEcos`.
 
-Se o download do ZIP grande falhar e você já tiver Godot 4.6.3, baixe apenas `FazendaEntreEcos-godot4.pck` (1,5 MB) e inicie com `godot --main-pack FazendaEntreEcos-godot4.pck`. Outra opção é baixar `FazendaEntreEcos-projeto-fonte.zip` (6,1 MB), extrair `Gamedev/` e abrir `Gamedev/project.godot` no editor. O pacote Linux completo pode ser baixado em quatro partes `*.zip.part00` a `*.zip.part03`; junte-as na ordem com `cat FazendaEntreEcos-linux-x86_64.zip.part* > FazendaEntreEcos-linux-x86_64.zip` e então extraia o ZIP. O SHA-256 do ZIP remontado é `d58bcc9f2ae305134bf490723b39317424173076e50cdacd9341454b4f4284df`.
+O projeto fonte já inclui os sprites integrados e o gerador editável. [Veja as pranchas antes/depois e três capturas comparáveis](docs/art/STYLE.md).
 
 Para editar, importe [project.godot](project.godot) no Godot 4.6.3 padrão e pressione F5. Pelo terminal: `bash run.sh`, ou `GODOT_BIN=/caminho/godot bash run.sh`. O launcher usa diretórios XDG graváveis quando está na nuvem e respeita os diretórios usuais no desktop.
 
@@ -63,4 +63,4 @@ Os testes escrevem relatórios em `${TMPDIR:-/tmp}/fazenda-qa`; `FAZENDA_QA_DIR`
 
 Decisões e revisão de lacunas: [arquitetura](docs/ARCHITECTURE.md). IDs, estados e formatos: [contrato](docs/INTEGRATION.md). Resultados e limites dos testes: [validação](docs/VALIDATION.md). Os documentos originais podem estar no checkout local em `docs/source/`; seus diagramas serviram de referência e não são sprites do jogo.
 
-Arte e áudio originais: CC0, [licença](assets/LICENSE.txt). Fonte DejaVu: [licença](ui_theme/FONT_LICENSE.txt). Godot: [MIT](docs/GODOT_LICENSE.txt), com [avisos de terceiros](docs/GODOT_COPYRIGHT.txt).
+Arte e áudio originais: CC0, [licença](assets/LICENSE.txt). Fonte Pixelify Sans: [OFL 1.1](ui_theme/FONT_LICENSE.txt). Godot: [MIT](docs/GODOT_LICENSE.txt), com [avisos de terceiros](docs/GODOT_COPYRIGHT.txt).

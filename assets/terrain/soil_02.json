@@ -24,6 +24,8 @@
   "directions": [],
   "filter": "nearest",
   "license": "CC0-1.0",
-  "sha256": "626f86e51312b0c30670974981c016a99720768147c0938fcfeb3b3b09cb74f0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "08ac3cb1c023c653c6e5883351366c1c4ce6b24d27b9a2b34a6dd05152fce706",
   "terrain_kind": "soil"
 }

@@ -1,0 +1,30 @@
+{
+  "id": "ui16_pause_locked",
+  "path": "res://assets/ui16/pause_locked.png",
+  "frame_size": [
+    16,
+    16
+  ],
+  "pivot": [
+    8,
+    8
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "f4313e12ddc21da1f3821527324d40f90761f70f4d49bf1c48b4509f7ca41610"
+}

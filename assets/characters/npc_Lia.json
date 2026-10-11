@@ -39,5 +39,7 @@
   ],
   "filter": "nearest",
   "license": "CC0-1.0",
-  "sha256": "0a523aa20f8bfc121bcd211f7ceeaab5d52f5262b955c4da98dd1ca65bdeb7c1"
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "99fbd29c19bc3e5a83f59d400f0e2189b565dd387722a23b91df733e02c93b29"
 }

@@ -1,0 +1,32 @@
+{
+  "id": "prop_bush_variant_2",
+  "path": "res://assets/decoration/bush_variant_2.png",
+  "frame_size": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    44
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "f07890274fd458a13537e2ff6b60a25c0a1666d91ff78e168099c1043b05b926",
+  "decorative": true,
+  "variant": 2
+}

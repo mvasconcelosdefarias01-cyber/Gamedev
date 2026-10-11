@@ -1,11 +1,12 @@
 {
   "passed": true,
-  "raster_assets": 158,
+  "raster_assets": 203,
   "audio_assets": 23,
-  "raster_frames_including_shirts": 852,
+  "raster_frames_including_shirts": 921,
   "errors": [],
   "checks": [
     "PNG bytes and RGBA",
+    "master palette",
     "real transparency",
     "sheet dimensions",
     "animation indices",

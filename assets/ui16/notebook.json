@@ -1,0 +1,30 @@
+{
+  "id": "ui16_notebook",
+  "path": "res://assets/ui16/notebook.png",
+  "frame_size": [
+    16,
+    16
+  ],
+  "pivot": [
+    8,
+    8
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "7b12098b2cb7012cbec9aaa7b8438142d739462b5f56118b79d4a49ebd28bbc1"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "ui16_inspect",
+  "path": "res://assets/ui16/inspect.png",
+  "frame_size": [
+    16,
+    16
+  ],
+  "pivot": [
+    8,
+    8
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "8a120001f11f57775909b5ce4fe4bd27cb9cfe2b01a64fc53435d20e6d5b5352"
+}

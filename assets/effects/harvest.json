@@ -1,0 +1,32 @@
+{
+  "id": "effect_harvest",
+  "path": "res://assets/effects/harvest.png",
+  "frame_size": [
+    16,
+    16
+  ],
+  "pivot": [
+    8,
+    8
+  ],
+  "columns": 3,
+  "rows": 1,
+  "frame_count": 3,
+  "animations": {
+    "pop": {
+      "frames": [
+        0,
+        1,
+        2
+      ],
+      "fps": 12,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "f104493c118044f061711e230b59732fea8dea8035e56e6e7e9420d64851fe7e"
+}

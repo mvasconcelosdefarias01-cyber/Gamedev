@@ -1,0 +1,32 @@
+{
+  "id": "prop_tree_fruit_variant_2",
+  "path": "res://assets/decoration/tree_fruit_variant_2.png",
+  "frame_size": [
+    80,
+    96
+  ],
+  "pivot": [
+    40,
+    92
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "7c9563bd8ee9d78beb40cc0bc8af3b80dc33c3ae04018919f0deccd7d6c425ed",
+  "decorative": true,
+  "variant": 2
+}

@@ -9,21 +9,25 @@
     24,
     44
   ],
-  "columns": 1,
+  "columns": 3,
   "rows": 1,
-  "frame_count": 1,
+  "frame_count": 3,
   "animations": {
     "idle": {
       "frames": [
-        0
+        0,
+        1,
+        2
       ],
-      "fps": 1,
-      "loop": false
+      "fps": 3,
+      "loop": true
     }
   },
   "directions": [],
   "filter": "nearest",
   "license": "CC0-1.0",
-  "sha256": "3a7f7cbff6cb10249b9a63016e65c7d558d649cb176221edebf1fa09b05fe67c",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "814422a3bb0f6e309b0c9587d03c0e25092377cc226f29413ba4047294fe8e48",
   "decorative": true
 }

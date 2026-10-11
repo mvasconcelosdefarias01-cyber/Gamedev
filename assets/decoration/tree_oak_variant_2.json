@@ -1,0 +1,32 @@
+{
+  "id": "prop_tree_oak_variant_2",
+  "path": "res://assets/decoration/tree_oak_variant_2.png",
+  "frame_size": [
+    80,
+    96
+  ],
+  "pivot": [
+    40,
+    92
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "5d73e935fe357868c709db62967360254d7dc1e3c373a74e1dab76dbccf28300",
+  "decorative": true,
+  "variant": 2
+}

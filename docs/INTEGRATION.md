@@ -31,8 +31,8 @@ Manifest em `assets/manifest.json`: caminhos relativos ao projeto, frame size, p
 - Jogador: `assets/characters/player.png`, grid 25×8, frame32×48, pivô (16,47). Colunas idle0..1, andar2..7, semear8..11, irrigar12..15, colher16..21, interagir22..24. Ordem de oito direções acordada no manifest, não inferida pelo consumidor. Três camisas preservam pivô/frame/collision.
 - NPCs: 5×4 frames (idle2, fala3), Lia/Rui; ecos 12×2 frames, três gestos de quatro frames.
 - Máquinas: 5×1, idle1+ação4. Aspersor32×32, coletor48×40, semeador40×40; estados de pausa e saldo são overlays com símbolo+texto.
-- Terreno64×32: 24 variantes +12 bordas. Construções com estados danificado/restaurado e footprint invariável: casa192×176, oficina160×144, cisterna128×112.
-- Narrativa: oito ícones de pistas e oito imagens-chave; quatro retratos. UI: três árvores, seis reparos, doze ações. Decoração: seis compras fixas e até20 adereços.
+- Terreno64×32: 32 variantes +12 bordas. Construções com estados danificado/restaurado e footprint invariável: casa192×176, oficina160×144, cisterna128×112.
+- Narrativa: oito ícones de pistas e oito imagens-chave; quatro retratos, cada um com três expressões horizontais 80×80. UI: três árvores, seis reparos, doze ações, ícones16px e painéis9-slice. Decoração: seis compras fixas,20 adereços e11 variantes.
 - Áudio: seis SFX cultivo, três máquinas, três ambiente, quatro mistério, três músicas, quatro UI. Fonte WAV na ferramenta; export compatível Godot; autoria própria e licença explícita. Sem clipping ou áudio essencial sem legenda.
 
 PNG alpha real, pixel coordinates, nearest, fontes e exports separados. Referências dos DOCX não entram nos sprites finais.

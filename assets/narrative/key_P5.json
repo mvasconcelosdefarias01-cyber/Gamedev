@@ -24,5 +24,7 @@
   "directions": [],
   "filter": "nearest",
   "license": "CC0-1.0",
-  "sha256": "d9e4044492e61e0e710897588e5364c3ca25e4bada613d356630f341b7bf634e"
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "5b0c510636376d320e5e815dbc99f078edbac313b343099ac56702e14b1adf78"
 }

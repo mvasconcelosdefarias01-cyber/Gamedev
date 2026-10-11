@@ -1,0 +1,30 @@
+{
+  "id": "ui16_harvest_locked",
+  "path": "res://assets/ui16/harvest_locked.png",
+  "frame_size": [
+    16,
+    16
+  ],
+  "pivot": [
+    8,
+    8
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "13fa74f1c04218ff099ffccb3a0fa3617982e860f49f3176b37952f568f89ba5"
+}

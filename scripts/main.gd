@@ -485,7 +485,8 @@ func show_dialog(name: String, text: String) -> void:
 	var portrait_id="portrait_"+name if name in ["Lia","Rui"] else "portrait_Tomas"
 	var path=world.asset_path(portrait_id)
 	if ResourceLoader.exists(path):
-		var portrait=TextureRect.new();portrait.texture=load(path);portrait.custom_minimum_size=Vector2(80,80)*preferences.ui_scale;portrait.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;portrait.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;content.add_child(portrait)
+		var atlas=AtlasTexture.new();atlas.atlas=load(path);atlas.region=Rect2(0,0,80,80)
+		var portrait=TextureRect.new();portrait.texture=atlas;portrait.custom_minimum_size=Vector2(80,80)*preferences.ui_scale;portrait.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;portrait.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;content.add_child(portrait)
 	story_label(content,text,20);button(modal_body,"Entendido · continuar",func():close_modal());focus_first()
 func memory_duration(id: String) -> float:
 	return {"P3":12.0,"P6":15.0,"P8":20.0}.get(id,0.0)

@@ -1,0 +1,36 @@
+{
+  "id": "panel_high_contrast",
+  "path": "res://assets/ui/panel_high_contrast.png",
+  "frame_size": [
+    24,
+    24
+  ],
+  "pivot": [
+    0,
+    0
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "8f639320e0665efcdca486231560c74517b24ca4c31162a56089f0043488287f",
+  "nine_slice_margins": [
+    6,
+    6,
+    6,
+    6
+  ]
+}

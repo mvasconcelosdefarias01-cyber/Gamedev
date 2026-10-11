@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "checked_exports": 181,
+  "checked_exports": 226,
   "changed_hashes": [],
-  "notes": "PNG/WAV hashes stable across full rebuild; OGG output bitexact verified by consecutive regenerated exports."
+  "notes": "PNG and audio SHA-256 stable across two consecutive complete rebuilds."
 }

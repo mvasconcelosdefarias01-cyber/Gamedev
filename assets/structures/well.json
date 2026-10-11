@@ -24,7 +24,9 @@
   "directions": [],
   "filter": "nearest",
   "license": "CC0-1.0",
-  "sha256": "58c943a9dd38495232c9a41f6a65849c07cb9eaa5816e66984217174fcc954b6",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "a26d203814d8363c5a670c62507132dd2efac8ef6ce27dea64737e804154dc4c",
   "footprint_tiles": [
     1,
     1

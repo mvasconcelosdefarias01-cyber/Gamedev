@@ -50,7 +50,7 @@ Os três slots e as opções ficam em
 %APPDATA%\Godot\app_userdata\Fazenda Entre Ecos\saves
 Copie essa pasta para fazer backup manual antes de atualizações.
 
-Arte/áudio CC0; fonte DejaVu e runtime Godot possuem licenças anexas.
+Arte/áudio CC0; fonte Pixelify Sans (OFL) e runtime Godot possuem licenças anexas.
 README
 
 python3 - <<'PY'

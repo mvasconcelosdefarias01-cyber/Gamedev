@@ -24,6 +24,8 @@
   "directions": [],
   "filter": "nearest",
   "license": "CC0-1.0",
-  "sha256": "4db69e714be95e34d6ba51cf91e440bbee79e2bff9c0ff935145eadb9cc7c9c1",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "f3399c467beec91058a5b804e0a19e00e4279f85351c9c7a751a9108ea268454",
   "terrain_kind": "grass"
 }

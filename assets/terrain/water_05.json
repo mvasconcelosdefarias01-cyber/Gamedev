@@ -1,0 +1,31 @@
+{
+  "id": "terrain_water_05",
+  "path": "res://assets/terrain/water_05.png",
+  "frame_size": [
+    64,
+    32
+  ],
+  "pivot": [
+    32,
+    16
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "3aca53d724d636a227eca918ef7a40a25408626bb224cc461e3d8131d54d0a29",
+  "terrain_kind": "water"
+}

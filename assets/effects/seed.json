@@ -1,0 +1,32 @@
+{
+  "id": "effect_seed",
+  "path": "res://assets/effects/seed.png",
+  "frame_size": [
+    16,
+    16
+  ],
+  "pivot": [
+    8,
+    8
+  ],
+  "columns": 3,
+  "rows": 1,
+  "frame_count": 3,
+  "animations": {
+    "pop": {
+      "frames": [
+        0,
+        1,
+        2
+      ],
+      "fps": 12,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "244262c74d4400c5f487e44f98a7cea3f82703f2fc0ae6ffc81ffd80bb79e16a"
+}

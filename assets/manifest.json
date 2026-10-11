@@ -5,33 +5,137 @@
   "source": "tools/north_asset_forge_2d/forge.py",
   "license": "CC0-1.0",
   "palette": {
-    "ink": "#243C47",
-    "paper": "#F7F4EB",
-    "soil": "#AA865F",
-    "soil_light": "#C6A57B",
-    "soil_dark": "#806044",
-    "leaf": "#80916C",
-    "leaf_light": "#A8B883",
-    "leaf_dark": "#536B50",
-    "gold": "#E2B55F",
-    "gold_light": "#F2D890",
-    "gold_dark": "#AE7B44",
-    "water": "#6B9293",
-    "water_light": "#A8C9C4",
-    "water_dark": "#497578",
-    "wood": "#B58A65",
-    "wood_light": "#D7AF81",
-    "wood_dark": "#745740",
-    "stone": "#9BA6A2",
-    "stone_light": "#D6D8C9",
-    "stone_dark": "#6A7B78",
-    "skin": "#D9AC88",
-    "skin_light": "#EDD0AA",
-    "shirt": "#B5715E",
-    "shirt_dark": "#814B47",
-    "blue": "#7694B7",
-    "linen": "#E0E0CE",
-    "violet": "#B2ABC2"
+    "ink": "#243c47",
+    "shadow": "#283b56",
+    "shadow_violet": "#4d4565",
+    "paper": "#f7f4eb",
+    "cream": "#ede4c9",
+    "linen": "#e0e0ce",
+    "soil_dark": "#684a52",
+    "soil_mid": "#806044",
+    "soil": "#aa865f",
+    "soil_light": "#c6a57b",
+    "soil_sun": "#e0be83",
+    "wet_dark": "#4c4b5a",
+    "wet_mid": "#675864",
+    "wet": "#806d69",
+    "wet_light": "#a68d80",
+    "wet_glint": "#d0b69a",
+    "leaf_dark": "#44566a",
+    "leaf_mid": "#536b50",
+    "leaf": "#80916c",
+    "leaf_light": "#a8b883",
+    "leaf_sun": "#ced09a",
+    "gold_dark": "#8e6251",
+    "gold_mid": "#ae7b44",
+    "gold": "#e2b55f",
+    "gold_light": "#f2d890",
+    "gold_sun": "#f9e8ad",
+    "water_dark": "#395c75",
+    "water_mid": "#497578",
+    "water": "#6b9293",
+    "water_light": "#a8c9c4",
+    "water_sun": "#d1e1cf",
+    "wood_dark": "#5d4b61",
+    "wood_mid": "#745740",
+    "wood": "#b58a65",
+    "wood_light": "#d7af81",
+    "wood_sun": "#e9cb93",
+    "stone_dark": "#56677a",
+    "stone_mid": "#6a7b78",
+    "stone": "#9ba6a2",
+    "stone_light": "#d6d8c9",
+    "skin_dark": "#a47170",
+    "skin": "#d9ac88",
+    "skin_light": "#edd0aa",
+    "shirt_dark": "#814b47",
+    "shirt": "#b5715e",
+    "blue": "#7694b7",
+    "violet": "#b2abc2",
+    "mint": "#d0dbb1"
+  },
+  "ramps": {
+    "wood": [
+      "wood_dark",
+      "wood_mid",
+      "wood",
+      "wood_light",
+      "wood_sun"
+    ],
+    "soil": [
+      "soil_dark",
+      "soil_mid",
+      "soil",
+      "soil_light",
+      "soil_sun"
+    ],
+    "wet_soil": [
+      "wet_dark",
+      "wet_mid",
+      "wet",
+      "wet_light",
+      "wet_glint"
+    ],
+    "grass": [
+      "leaf_dark",
+      "leaf_mid",
+      "leaf",
+      "leaf_light",
+      "leaf_sun"
+    ],
+    "stone": [
+      "stone_dark",
+      "stone_mid",
+      "stone",
+      "stone_light",
+      "paper"
+    ],
+    "cloth": [
+      "shirt_dark",
+      "shirt",
+      "gold",
+      "gold_light"
+    ],
+    "skin": [
+      "skin_dark",
+      "skin",
+      "skin_light",
+      "cream"
+    ],
+    "foliage": [
+      "shadow",
+      "leaf_dark",
+      "leaf",
+      "leaf_light",
+      "leaf_sun"
+    ],
+    "metal": [
+      "shadow",
+      "stone_dark",
+      "stone",
+      "stone_light",
+      "paper"
+    ],
+    "water": [
+      "water_dark",
+      "water_mid",
+      "water",
+      "water_light",
+      "water_sun"
+    ],
+    "roof": [
+      "shadow_violet",
+      "leaf_dark",
+      "leaf_mid",
+      "leaf",
+      "leaf_light"
+    ],
+    "sunlight": [
+      "gold_dark",
+      "gold",
+      "gold_light",
+      "gold_sun"
+    ]
   },
   "assets": {
     "crop_C1": {
@@ -82,7 +186,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "5d1e1b2ff93d02617c48e5e74b625e9d04b9afb4d18e0f6d38814f7fdd350a03"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f03c8b75a1b3b98fbae527ae05af29b69cf47c05f9c43fa47399a4bd43f8c0e2"
     },
     "icon_crop_C1": {
       "id": "icon_crop_C1",
@@ -110,6 +216,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "3a166bab892275a188f12d14b8aa6a204b522b97577c781583e856203e1e8492"
     },
     "crop_C2": {
@@ -160,7 +268,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "fc65d68a02c29806afb94cf2ee23fb56a365c3da718f0ff14df817e16e22f227"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "ffed3db59cd13b54d850587cd4176f088ac201bd6209437ff19b9436d204b5c9"
     },
     "icon_crop_C2": {
       "id": "icon_crop_C2",
@@ -188,6 +298,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "e07570d12fbd8fdefce95ec5fed5bc3dba7eab939d54031671128def00f7b851"
     },
     "crop_C3": {
@@ -238,7 +350,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "f39f6d3c84a79dc5333e9b677ef88be4d501d44a7ac54bc55c10a449b76487b8"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "d242f0e140562a16ead8c04feb759c28adab767e680c250e030279eb1dbff175"
     },
     "icon_crop_C3": {
       "id": "icon_crop_C3",
@@ -266,7 +380,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "4c669be9f7f7c81366cf492abec49dc5bd569f020f34a88b3a45548e234986fc"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f69b07e6ca6d74fb4fcd17c41528ea184279039334db7d154bc50c5f7a08b988"
     },
     "crop_C4": {
       "id": "crop_C4",
@@ -316,7 +432,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "7d7630276e48fe26d2cd0c7282dc20bae65f31b2a8a27cb59d05769975f745f0"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "957425a1eb7c8ee95bef3091930a66c4b715a9bc2de583cc1d15ed785ab14dd7"
     },
     "icon_crop_C4": {
       "id": "icon_crop_C4",
@@ -344,7 +462,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "3dae643c2b5b83bf47bd78b1bffb0435079e43be2d3df95aee8544d758e0b63d"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "4519dbbc131c8c92b57d874314054e92a780e11a8f9418d885c0f36e0237bb4a"
     },
     "crop_C5": {
       "id": "crop_C5",
@@ -394,7 +514,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "a90c39aaffd590afbfa1646671ee2446d62324792952d225589f67f7c6523952"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "86b2113739deaceedea818ec6bfa26ed6bf18dae9c41ed9790c228f2875581af"
     },
     "icon_crop_C5": {
       "id": "icon_crop_C5",
@@ -422,7 +544,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "a2652b448029013060e99af7744c3c1f36f502662608bc58c8b3447fdd6e2846"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "77dff446b6e89445a6af7c902f050a312fa09a6913ca0a396c8c4f55cf8af0aa"
     },
     "crop_C6": {
       "id": "crop_C6",
@@ -472,7 +596,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "511f10eb1d9cba4a42bf6946872651f46eb0aea9fa02bfaf9561ea192067d4a2"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "2e62652dc8ec9ad33800999c1e7660a31f8ec23a71408e3ad6a1499d5cb8844f"
     },
     "icon_crop_C6": {
       "id": "icon_crop_C6",
@@ -500,7 +626,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "434261bcebbf42880439960359d51e014e95af36a53eff5f0db189f26d500e7c"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "a69c0b15426a1d5b144c5661a7b6886fa90ec3a22d8b6ecbaeea6d73089d0806"
     },
     "player": {
       "id": "player",
@@ -591,7 +719,9 @@
       ],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "5abd9a3f86225abce39f53177d336173a4f1b42d25ccd6cbc7f4756676a867c1"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "c65e3004f1dfc8ea2e8978cc9cbcb2fe6d8912acc55c95550fbc6684c4a474b8"
     },
     "player_ochre": {
       "id": "player_ochre",
@@ -682,7 +812,9 @@
       ],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "0bff902abf4e5e71e04d65c1047c932b384873e0f422a8c32e46dd530af10dc0"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "0bd53cb5da3a9b3abf9b21b930b114c4db4307744b7aa9e6a0044ee63394accf"
     },
     "player_blue": {
       "id": "player_blue",
@@ -773,7 +905,9 @@
       ],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "beb02ef8b144d8684172c44f7fe63a0d1d5a64b9d9e40b18ebba4b731ff0db90"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "29a593312fca42d95c00059f331d2e29fea0837f738bbccf2c65503fd521d7d3"
     },
     "plot_empty": {
       "id": "plot_empty",
@@ -801,7 +935,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "626f86e51312b0c30670974981c016a99720768147c0938fcfeb3b3b09cb74f0"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f889d5c387e31fbea836ca68c0498b4dcf4131c693d326fbf0b7349d3016f445"
     },
     "plot_wet": {
       "id": "plot_wet",
@@ -829,7 +965,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "ef2ed4f48fbda9458cad81f22493e6c6a3cb1210db498ce923147a04a3c4c4f3"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "c0a729c6eac4df47e7492e13d5d000276a2b8097149d078e07b68c2166c161d6"
     },
     "state_dry": {
       "id": "state_dry",
@@ -857,6 +995,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "be48d2bd8dd205b5e13f88dc94ddc4c84ba2dc156476d4e4d20a33113f046cb0"
     },
     "state_mature": {
@@ -885,6 +1025,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "9e2cb47cd087aa5ba99971f734471ec9e0621831007d47f39dd5147be5e6efee"
     },
     "state_memory": {
@@ -913,6 +1055,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "48fe4d555ff05481de548af579983325fb14a7df83d3dec44ec3ef2c6c9937f3"
     },
     "state_pause": {
@@ -941,6 +1085,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "aa580b6f1da39e9a2fd3505ce7b6585e8e8a20186c9dc1385691ab00113f5f1b"
     },
     "state_coin": {
@@ -969,7 +1115,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "068eb67a011971d887e59ced837ab79d8a8b5c48aafaac44074ca0db1e788356"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "88eeaddd5b305123aa09e48b0c031c0a64d938706f3a779f17e06110fd3f6934"
     },
     "state_check": {
       "id": "state_check",
@@ -997,7 +1145,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "12897cad5582ee9216537319a0f33e8182b9823e19dedf2958612eaa549834f8"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "6b15fbc616e8d8a92faccd9520041b068f7dba62a7468a0eb6f6e2402ed760ba"
     },
     "machine_sprinkler": {
       "id": "machine_sprinkler",
@@ -1035,7 +1185,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "749554a3c9b20c018ba4d60dd4242d31e995c1b95529606ee24826bc3952ef09"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "d165c6642bef17e58d08a1f57ee44fccaa201a0b9c6bd422a450a1768b3f61f2"
     },
     "terrain_grass_01": {
       "id": "terrain_grass_01",
@@ -1063,7 +1215,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "a58c15e142644c37f17773eafbc387571fe31bd5732cadfa49800f6bad0ca49f",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "ae51610901f08b8c2fae755aaebfe82c3422e28da1fbc5e0139c467aa8b53b9a",
       "terrain_kind": "grass"
     },
     "terrain_grass_02": {
@@ -1092,7 +1246,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "4db69e714be95e34d6ba51cf91e440bbee79e2bff9c0ff935145eadb9cc7c9c1",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f3399c467beec91058a5b804e0a19e00e4279f85351c9c7a751a9108ea268454",
       "terrain_kind": "grass"
     },
     "terrain_grass_03": {
@@ -1121,7 +1277,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "95ec98d44f061c40ae6bdfcebbcde558c10865c9c9a951ca8f48afea99aabf92",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "1c17ef121b48f2ececb576731ccb8e0bb4d0e7160471f4e3a254d7d5af946ed3",
       "terrain_kind": "grass"
     },
     "terrain_grass_04": {
@@ -1150,7 +1308,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "ad99ba79dd3c6e4c78193404a9d74f91f45f32742adbf023cec052be19ee8e33",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "b3263b5a49e8a4ea5a4324bef1e146481c1826b216cca66c788bfc73692eefb0",
       "terrain_kind": "grass"
     },
     "terrain_grass_05": {
@@ -1179,7 +1339,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "10418b9e111929a4949df2d7e2022b90a88cb22f775f72886ca039afdf036b84",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "00e339c4ae8cf73db4a054ec4126683101f7b512f20b3b491d7453f0a70cb0b9",
       "terrain_kind": "grass"
     },
     "terrain_grass_06": {
@@ -1208,7 +1370,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "c729920d53c7dc8d32d8ab8753c5cc0dba25573b3ce73a10ca1d89ffec21923a",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "bde87593645070a321fc94a592de791909cd26d04d6a3efd63d966b0f0354cf0",
       "terrain_kind": "grass"
     },
     "terrain_path_01": {
@@ -1237,7 +1401,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "8fe714541679c1fc7606e12fcf4e11d4d6b1b1b95a965117e39ed7df05e78d9e",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "5d22be2de087139b59687466ecb966a155d9f797f52dbec4720ea2b9d067d907",
       "terrain_kind": "path"
     },
     "terrain_path_02": {
@@ -1266,7 +1432,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "a0a6f2ceb514d247a7b114e233856aa2fbf4deae9adf32a61992cc0f452668b9",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "379c7e0979cfb9ac2516cbb9f38d70afe438488935873ec314ff0ec305a13291",
       "terrain_kind": "path"
     },
     "terrain_path_03": {
@@ -1295,7 +1463,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "fc5f7c7a2057559f06f0b5f14b7f08628461ea70e63027b4010efcc65c5254ce",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "7bdd0c350ee2214972b2991df82bd02da8b7211cc7ba706468dc88ee00bf11c1",
       "terrain_kind": "path"
     },
     "terrain_path_04": {
@@ -1324,7 +1494,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "bfee7e0832c3e0193d09f6ce44bab34eee508fa456eaa837ad8f7aa4caf33a35",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "3dd04fa7c6869636effa458e6863dea6522a87267af1db19076b7b644f7257b7",
       "terrain_kind": "path"
     },
     "terrain_path_05": {
@@ -1353,7 +1525,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "2b8c2d1fb65a87a9e7b1cc09ee651cb3a1f119e0421c6c48b2424d11d0511fbe",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "27541b071a85eada751cd86e8488816a321cc708d5a7b2e2ac672a85ad3cc483",
       "terrain_kind": "path"
     },
     "terrain_path_06": {
@@ -1382,7 +1556,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "6852d6d5fd2fb100d9d234ce74f2509106d3d003eab39ed92cd8fc1448239160",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "80e2393296c72a4bc7d8a2d7a5c85ea38c4d6f3d714996178dca57660bd54693",
       "terrain_kind": "path"
     },
     "terrain_soil_01": {
@@ -1411,7 +1587,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "626f86e51312b0c30670974981c016a99720768147c0938fcfeb3b3b09cb74f0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f889d5c387e31fbea836ca68c0498b4dcf4131c693d326fbf0b7349d3016f445",
       "terrain_kind": "soil"
     },
     "terrain_soil_02": {
@@ -1440,7 +1618,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "626f86e51312b0c30670974981c016a99720768147c0938fcfeb3b3b09cb74f0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "08ac3cb1c023c653c6e5883351366c1c4ce6b24d27b9a2b34a6dd05152fce706",
       "terrain_kind": "soil"
     },
     "terrain_soil_03": {
@@ -1469,7 +1649,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "626f86e51312b0c30670974981c016a99720768147c0938fcfeb3b3b09cb74f0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "d281cfb2157ccc0d5549534e365af489b15811cfab37adcc9e3e897d3bd4d504",
       "terrain_kind": "soil"
     },
     "terrain_soil_04": {
@@ -1498,7 +1680,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "626f86e51312b0c30670974981c016a99720768147c0938fcfeb3b3b09cb74f0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f889d5c387e31fbea836ca68c0498b4dcf4131c693d326fbf0b7349d3016f445",
       "terrain_kind": "soil"
     },
     "terrain_water_01": {
@@ -1527,7 +1711,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "3a02cc62ab982adeaa7f69302ef59aa5fe48b1dedc7e56dcc2e89f75262b8eb3",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "81e5205c1b74ace70663d453628d953cb4129773ef5d6daf9909ef5b15417686",
       "terrain_kind": "water"
     },
     "terrain_water_02": {
@@ -1556,7 +1742,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "3a02cc62ab982adeaa7f69302ef59aa5fe48b1dedc7e56dcc2e89f75262b8eb3",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "a3e39e22e067ce79a7329733f6d7aba071d8624269ad5826ae6404b4fcc50790",
       "terrain_kind": "water"
     },
     "terrain_water_03": {
@@ -1585,7 +1773,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "3a02cc62ab982adeaa7f69302ef59aa5fe48b1dedc7e56dcc2e89f75262b8eb3",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "9d0b8b3d865cddaec31d302713ce1231bd15521a3213552447baa68b516790cf",
       "terrain_kind": "water"
     },
     "terrain_water_04": {
@@ -1614,7 +1804,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "3a02cc62ab982adeaa7f69302ef59aa5fe48b1dedc7e56dcc2e89f75262b8eb3",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "74d23523ae9495f040d734aa36838c5990f89ac455711678899f7d0da2386f79",
       "terrain_kind": "water"
     },
     "terrain_stone_01": {
@@ -1643,7 +1835,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "69da44aa456bd1334e8246d2e8e0f52ef6be2018c0205fdbcd0e7ce53fb08f64",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "390000740d190b23761a7df0947349595cc7ce7a5f28457a9ff730e54dad82f9",
       "terrain_kind": "stone"
     },
     "terrain_stone_02": {
@@ -1672,7 +1866,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "5022059be307b7b3b6f0ad222af65718189e482d0b4632bb2a4f689b6bfac440",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "ce076ea0a8ab566ce627ab6866e0b5903cd23325ec704e49daa72dd8415c912a",
       "terrain_kind": "stone"
     },
     "terrain_stone_03": {
@@ -1701,7 +1897,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "128a05c0772b0ae0507d8048fd0f892904d04c0630fcbbdd1c86eaa370d55258",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f35f931e0a515d7ee53173257785bb76ad9b78e43f2f818b10cba7569845c4c2",
       "terrain_kind": "stone"
     },
     "terrain_stone_04": {
@@ -1730,7 +1928,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "d432076e71f28a041c1f944a9c53d61f2866c0617a6db8b28aec434e57e34795",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "7ad13a6588b8b3c17c45152d9c8f327c12f432dee63b9bac04cf9b073ed3115f",
       "terrain_kind": "stone"
     },
     "border_01": {
@@ -1759,7 +1959,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "766ae06ec47a31a2755af4bf8a643417833d5e757771419b03a18196eab7ae08",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "1f5bcbcb5f2648bb579afb2ad5b857ae90af2447976b86dbdfec7d979cc24019",
       "edge_direction": "NW"
     },
     "border_02": {
@@ -1788,7 +1990,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "856cd0372086f20b9a9a589c8af9448594fbd2d6a0f7f52b7beb91ea83d7ca45",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "b41730c25f5e661e9031164e507712175539e890acfdd5d424970b38d27effc8",
       "edge_direction": "NE"
     },
     "border_03": {
@@ -1817,7 +2021,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "58d11068351b94d15a0bfd904f418fb453ef89223e8a4e5528b3af9295a346fa",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "a2de9ba24a2ead2f5f94eeba1aea34cede8c01f4450f8c1761060497db56dc10",
       "edge_direction": "SE"
     },
     "border_04": {
@@ -1846,7 +2052,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "8822ce271c543c11967c56c299a058f6a079ee48233cc04d6c3934adc9cdbe4e",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "547141dd2d7290d47ccbd7d3332ae76ef7e632b2bb746b872b31a994ff7a0156",
       "edge_direction": "SW"
     },
     "border_05": {
@@ -1875,7 +2083,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "a87c81ec4f1a6ff66dc14dc9fec5917c045694f4e1eb0c533977dcfb3b35892f",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "1ceff0b5d1f3a66f4ebd5e7512f89338639b75c7f469a77ec4b5910534391fc4",
       "edge_direction": "NW"
     },
     "border_06": {
@@ -1904,7 +2114,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "be762e43fd6ad373cba39eb7fa05f4b3cd52d6a17fa19f1442c08e3a48e2170b",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "8dab3b288d66aeacae9d6b36f2e5b1a1d30ebf6474100f257ae0ce979df8a73b",
       "edge_direction": "NE"
     },
     "border_07": {
@@ -1933,7 +2145,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "0ccede4c4a5381fda90e9a0f658daaac6419fa6d0a3ce44f925fa23dd15561eb",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "34cc329615b7661b5c3e9f449aa00f290ccccc285097bb2e4e1c85e1cb9e5ff1",
       "edge_direction": "SE"
     },
     "border_08": {
@@ -1962,7 +2176,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "3245d9dcb9d7f88b41c2bbd7372338accb417aa364a91570de29840886719fc3",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "096334d6c78a4c3954abd10545dc011e2c6ef8791e7c56573c7718bae65a7b51",
       "edge_direction": "SW"
     },
     "border_09": {
@@ -1991,7 +2207,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "e9058bf8ee21d7b95d9952fb9d8324f56258ec5d94cdbe89315db0e2d4883c0b",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "70e49be031497ce5d0993b636362ca2f9fb2438ebed1014ed881bf4b947ebae3",
       "edge_direction": "NW"
     },
     "border_10": {
@@ -2020,7 +2238,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "d120fc4a52a5dc3a749a4685e96fe6f6a18e3e1189e4a96fa10380bda44fe962",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "c75a97aaaf390c76ad4e0e6df6ecf1d7f495f1bb875a9b6518afcf818d649ef3",
       "edge_direction": "NE"
     },
     "border_11": {
@@ -2049,7 +2269,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "5ec2ff0355c7c66fc5cdd7072c6f259eb7b90462a540c2c50bc7efe62e3ff29b",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "58431987302964c1eee9061252820b251505bb0288daa4aa348b929b68934ce1",
       "edge_direction": "SE"
     },
     "border_12": {
@@ -2078,7 +2300,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "2c5c4c31981f4445764f5adab344b44954b3a5b7239d38030e836e73afa2f390",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "ad39855611e6a0ed436cce9ec0b475d9019ac7b9b08fef41b316198037c8b861",
       "edge_direction": "SW"
     },
     "npc_Lia": {
@@ -2122,7 +2346,9 @@
       ],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "0a523aa20f8bfc121bcd211f7ceeaab5d52f5262b955c4da98dd1ca65bdeb7c1"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "99fbd29c19bc3e5a83f59d400f0e2189b565dd387722a23b91df733e02c93b29"
     },
     "npc_Rui": {
       "id": "npc_Rui",
@@ -2165,7 +2391,9 @@
       ],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "50023559f7507b552d4e8262dd795be97d20d192de22a36829b2970dae5c8ad0"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "dbf5f158a2611c576cd3508d26a3e42a98dbaa51337e62a87566d7cfa539ddd4"
     },
     "echo_Tomas": {
       "id": "echo_Tomas",
@@ -2219,6 +2447,8 @@
       ],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "fc2a8cc7bb62d42640c4536e046ec2d4eaa70f52ab78abb4dd4870e1ff1a4b03"
     },
     "portrait_player": {
@@ -2232,13 +2462,27 @@
         40,
         40
       ],
-      "columns": 1,
+      "columns": 3,
       "rows": 1,
-      "frame_count": 1,
+      "frame_count": 3,
       "animations": {
-        "idle": {
+        "neutral": {
           "frames": [
             0
+          ],
+          "fps": 1,
+          "loop": false
+        },
+        "happy": {
+          "frames": [
+            1
+          ],
+          "fps": 1,
+          "loop": false
+        },
+        "concerned": {
+          "frames": [
+            2
           ],
           "fps": 1,
           "loop": false
@@ -2247,7 +2491,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "0afc85617f60d03a237f076287b561693c4ee3b3ca871ce00b296e4ffd334b5e"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "e05f8e18030711d9027c7342755f18c928ca1b27b5f5408c5eafc3530cdbaf4a"
     },
     "portrait_Lia": {
       "id": "portrait_Lia",
@@ -2260,13 +2506,27 @@
         40,
         40
       ],
-      "columns": 1,
+      "columns": 3,
       "rows": 1,
-      "frame_count": 1,
+      "frame_count": 3,
       "animations": {
-        "idle": {
+        "neutral": {
           "frames": [
             0
+          ],
+          "fps": 1,
+          "loop": false
+        },
+        "happy": {
+          "frames": [
+            1
+          ],
+          "fps": 1,
+          "loop": false
+        },
+        "concerned": {
+          "frames": [
+            2
           ],
           "fps": 1,
           "loop": false
@@ -2275,7 +2535,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "27394b3efc236549a053bf3c6c75c3a6362f9245ced59002f61f789411a19101"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "94c0c3075695090fc12f8fe389ed2c765dcb70af3f480922c8ba49b696806ef9"
     },
     "portrait_Rui": {
       "id": "portrait_Rui",
@@ -2288,13 +2550,27 @@
         40,
         40
       ],
-      "columns": 1,
+      "columns": 3,
       "rows": 1,
-      "frame_count": 1,
+      "frame_count": 3,
       "animations": {
-        "idle": {
+        "neutral": {
           "frames": [
             0
+          ],
+          "fps": 1,
+          "loop": false
+        },
+        "happy": {
+          "frames": [
+            1
+          ],
+          "fps": 1,
+          "loop": false
+        },
+        "concerned": {
+          "frames": [
+            2
           ],
           "fps": 1,
           "loop": false
@@ -2303,7 +2579,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "67f60b1b487178226c60b0ebd7be705d5c0672ffd3b5f9948ce0ecc6d5e3aaa8"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "13923357836c725777d24033091493407a4fda8fef779de6116227a37fd2d732"
     },
     "portrait_Tomas": {
       "id": "portrait_Tomas",
@@ -2316,13 +2594,27 @@
         40,
         40
       ],
-      "columns": 1,
+      "columns": 3,
       "rows": 1,
-      "frame_count": 1,
+      "frame_count": 3,
       "animations": {
-        "idle": {
+        "neutral": {
           "frames": [
             0
+          ],
+          "fps": 1,
+          "loop": false
+        },
+        "happy": {
+          "frames": [
+            1
+          ],
+          "fps": 1,
+          "loop": false
+        },
+        "concerned": {
+          "frames": [
+            2
           ],
           "fps": 1,
           "loop": false
@@ -2331,7 +2623,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "12a049b1967d0f5a6c7c556e944dd631f5b3321e57e9bb0eb0af213b1dfa404b"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "9e0f605259ff434a849bcdac4820e0b5d01fdd1e1eb4622ffeff737d1293bfbd"
     },
     "machine_collector": {
       "id": "machine_collector",
@@ -2369,7 +2663,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "04a4ee5f5bf1ece3008e5bddda6d410a317b75d10ffc9655d4506ca20b0a1280"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "3f3d758f555db0d91441d0e6caa9c58f962d338c28d7508e413c7e97cb8be213"
     },
     "machine_seeder": {
       "id": "machine_seeder",
@@ -2407,7 +2703,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "3ab3c7ea1b0ca1252699b5805f7c3550234ad11e633d9d8ae8eaccd3a4ece967"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "04e64c94d9a5256f227ad70e12ec66d0d06a18cd3477965618211bb859272863"
     },
     "house": {
       "id": "house",
@@ -2435,7 +2733,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "9164d0399bcea181d0ebbdbe6579eb54e7b57032285739bcd4eb6ff88c6c67d9",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "fdcf6101bc55aff1ec9ddde72ee1ae3ffea8b29f68129edbadb6e320c8aa1a56",
       "footprint_tiles": [
         3,
         3
@@ -2468,7 +2768,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "7bb85006cdaf9585f03b3801ef21ba7148e7e1754b7e5c0a8fca0b0248809821",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "1f7dea486bd7d596c4785f81a7cb99cf65c193dbcf121300c1d236c7e23e1f35",
       "footprint_tiles": [
         3,
         2
@@ -2501,7 +2803,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "4ca527b28a0611f1afb77264c54108ddd8a585a20d3c817cb8cc75fbd6b05fc0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "7b45fb1388e6f7515c4b323e6c39755d1e0f23d09e5116dbcc1430dd77f3f3db",
       "footprint_tiles": [
         3,
         2
@@ -2534,7 +2838,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "31035b5f889fdc0069c44eecc4276746c68712b5ddb830f3b22a5071a5aace59",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "eea0e6a29d9ee3cdf3697d3cbe5d110589930ae55fc82f5b47183449c43dbdd3",
       "footprint_tiles": [
         2,
         2
@@ -2567,7 +2873,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "96c9a4a9dccc15dfedd799f9145cd6e00f08d53d2f83272459ccde5cf7bddc6c",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "24160e9a3a4c84bba31a4c1ad9733faa3eb0b502539129cb8449a37510aae4d0",
       "footprint_tiles": [
         2,
         2
@@ -2600,7 +2908,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "58c943a9dd38495232c9a41f6a65849c07cb9eaa5816e66984217174fcc954b6",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "a26d203814d8363c5a670c62507132dd2efac8ef6ce27dea64737e804154dc4c",
       "footprint_tiles": [
         1,
         1
@@ -2633,7 +2943,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "a3bedd88bfd4adfdcd49df64682316881f2b8f392f9f69ee7a605d75a134b1ef",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "a06c2e6b8487c3383d7f65fdc2680448a0e61c5bba4fee3638015e5bea96a8ba",
       "footprint_tiles": [
         3,
         1
@@ -2666,7 +2978,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "5a537d837009c4566cb855cc712153ec6e9f0dc4aa9d28f6442bdeaddff2c4ff",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "aa369caf34ff7f955502c6f0146e6bc0f9f435fe6846161a5b4c4dc432ada4a9",
       "footprint_tiles": [
         3,
         1
@@ -2699,7 +3013,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "4d99fee3d7be77f398cca1814ac3d97bb41d6f7e153c114b8cbcb88b7c6fe813",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "6921ec4dceb30b9b4b05c13d41767245b18247d40f505c5d5cfcf5590aaadca8",
       "footprint_tiles": [
         1,
         1
@@ -2732,7 +3048,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "5b55e1d9eb9042910d7a5f855f3002cff918f05085773df388e0620cbcae03d8",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "c7a67b27db5edf4b63eb562453da75361c51abe8f1e0ec2767b82ea334acce17",
       "footprint_tiles": [
         1,
         1
@@ -2765,7 +3083,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "b471df08f47a3ca59bef09866449920786901eb8b2fdbc2b3cd89e6adaf432cd",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "008c18fadbbcbae508ab68045eae35d99ac60bc7a27c07b37d9435693f6d061a",
       "footprint_tiles": [
         2,
         2
@@ -2798,7 +3118,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "a290c54f78fbafe49dbdec04c4beb20dacd56a3126fa3a750b6bbb7887e01917",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "acabb0a3a143a78a71fb5f13841f18f7d1f3ae4422b3672bf5f545aaa5ac9469",
       "footprint_tiles": [
         2,
         2
@@ -2831,7 +3153,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "b471df08f47a3ca59bef09866449920786901eb8b2fdbc2b3cd89e6adaf432cd",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "008c18fadbbcbae508ab68045eae35d99ac60bc7a27c07b37d9435693f6d061a",
       "footprint_tiles": [
         2,
         2
@@ -2864,7 +3188,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "a290c54f78fbafe49dbdec04c4beb20dacd56a3126fa3a750b6bbb7887e01917",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "acabb0a3a143a78a71fb5f13841f18f7d1f3ae4422b3672bf5f545aaa5ac9469",
       "footprint_tiles": [
         2,
         2
@@ -2897,7 +3223,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "d9577480d98166fabf16182cac9f9e1674bc91e1a6abe087725c2d4cb2522bad",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "2ef29992c6398c3b17c475766d6e5aad8a31798d26bfa3096ab9bd62c2831bb7",
       "footprint_tiles": [
         1,
         1
@@ -2930,7 +3258,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "8e7a79f6bf1c115fc5e7f4170925affe6e0d1afbcf9c9b59e8f9c3a5d676d75e",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "86a2c4877de134e58f537cea262a52c21b2798ac7ab84feb39f9a5906e861878",
       "footprint_tiles": [
         0,
         0
@@ -2963,7 +3293,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "90cde6e4ae93c92109410d9524ce6b31d48b048c13f8bb1fb564e66c5ac52d40",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "27c9c39ea100b66488af56e94f58f0c6180fa206933882fb71f05b29b048c2c0",
       "footprint_tiles": [
         3,
         1
@@ -2996,7 +3328,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "4a8d852b931c506f5d54d3b4cc2a3836c1e4057c220099a7550500f1570ceda6",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "459cebf02391b3df1426dff147d3a265ee743a04e2989009d15cfcd283ebfb74",
       "footprint_tiles": [
         0,
         0
@@ -3029,7 +3363,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "d0476ed1c07b07e15346c1b82a166e79b3466f37532753483596a6dc757b5ca6",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "15a402824f0a8d43b3a7616229f6ad1415218b332c8478a1a9bc30e3f48e7cff",
       "footprint_tiles": [
         1,
         1
@@ -3047,22 +3383,26 @@
         40,
         92
       ],
-      "columns": 1,
+      "columns": 3,
       "rows": 1,
-      "frame_count": 1,
+      "frame_count": 3,
       "animations": {
         "idle": {
           "frames": [
-            0
+            0,
+            1,
+            2
           ],
-          "fps": 1,
-          "loop": false
+          "fps": 3,
+          "loop": true
         }
       },
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "93380df598a7eb1b0c7c2af5339cd846fa2dbea5f6ff27ad0d37504057ebc38a",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "3868597789aa889d3df6bca5afd0c83c4d43a984f8fd3d19d624ed71b8bb8e66",
       "decorative": true
     },
     "prop_tree_fruit": {
@@ -3076,22 +3416,26 @@
         40,
         92
       ],
-      "columns": 1,
+      "columns": 3,
       "rows": 1,
-      "frame_count": 1,
+      "frame_count": 3,
       "animations": {
         "idle": {
           "frames": [
-            0
+            0,
+            1,
+            2
           ],
-          "fps": 1,
-          "loop": false
+          "fps": 3,
+          "loop": true
         }
       },
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "cbbf451e342cae4c6d8c84f99b4aa2d9de5f591b37644b618f6942ff9fcd2800",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "8edd44d4170608d8de35d33b5d6f5196dfa929601a41d43c75c80c80cc73eec1",
       "decorative": true
     },
     "prop_grass": {
@@ -3120,7 +3464,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "90a16720ce1dfa4d06dcaf4e824349226af138bf83af29fc47b77c8ac839bfb7",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "91ab4869524dfa3f8111194f3e727cb7c8d03ffa5c29363aff1f1bf9eeb4f47e",
       "decorative": true
     },
     "prop_fern": {
@@ -3149,7 +3495,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "90a16720ce1dfa4d06dcaf4e824349226af138bf83af29fc47b77c8ac839bfb7",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "91ab4869524dfa3f8111194f3e727cb7c8d03ffa5c29363aff1f1bf9eeb4f47e",
       "decorative": true
     },
     "prop_rock": {
@@ -3178,7 +3526,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "6f71ff0c43086ae09b723f7b0b8b313e7a6b9b881b0ea8aac28585cc8f1eb2fc",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "024fb6ba9cf38300ddc1e1dc20c84ed27989fbeea19cf813edaee792848a7d9a",
       "decorative": true
     },
     "prop_smallrock": {
@@ -3207,7 +3557,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "6f71ff0c43086ae09b723f7b0b8b313e7a6b9b881b0ea8aac28585cc8f1eb2fc",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "024fb6ba9cf38300ddc1e1dc20c84ed27989fbeea19cf813edaee792848a7d9a",
       "decorative": true
     },
     "prop_stump": {
@@ -3236,7 +3588,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "119072eb7d52690fc63314858827a9a4fcf41650bea3c85c10f2caff967fe7e1",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "4e60015c7409689d32bdaf795e7d2a49263cabc31e52594ce97ff1e6bd8849f1",
       "decorative": true
     },
     "prop_log": {
@@ -3265,7 +3619,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "1ba1cc8cd0a10ec21ed11cb8d06d993e76b30c84e6811981f2bf40c1d37e2306",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "1edd5448817fd405c308b7e4a10d13da39ae2e148f8c3379996f83e79f1ec3e1",
       "decorative": true
     },
     "prop_bush": {
@@ -3294,7 +3650,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "a1459d226779d18a77f7cf1ad6c79e0f3526468074844cc2d5ba490f068343bb",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "50c2485b7f3550f0cdeaf5626bbd62f358746655f29d7bd5b10fa31c0ad5a53b",
       "decorative": true
     },
     "prop_fence": {
@@ -3323,7 +3681,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "4d629669529c7b1b71e4b9bce06942ce96490401bb9db4db77064ee70620f392",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "4e3fd1222acf0d02618d2a809658d41fc389eadf717ada774e73e1307c93bbca",
       "decorative": true
     },
     "prop_crate": {
@@ -3352,7 +3712,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "97fd4bf635cf68da947828be7b20a65895056a1b5c0c8e03f6bbef146d152542",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "011c6c39b22825895857b1d48f001874aad66d1c3398972f66527365e5aa4993",
       "decorative": true
     },
     "prop_barrel": {
@@ -3381,7 +3743,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "f47c1c0910c1184913316298bda6af7d774291564c9993f861e576e2290b604f",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f7fc2b3113b90e05fb55a3efb36926d986e39d45e754e2e839480f30e3e7b18a",
       "decorative": true
     },
     "prop_hook": {
@@ -3410,7 +3774,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "642adc029b76cdb9442b1235363f2c549ebf33aa92cec470e7ca411667bc39f1",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "4e6c05ef777539863dd509d93bfc0714d02fa62e46fda2c262336a2659ea35d7",
       "decorative": true
     },
     "prop_footprint": {
@@ -3439,7 +3805,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "fb5c0ff2cc2b9ccbaee051ae9c564f310bad6b35b7d559c0f9fc4fbb419e191d",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "de365da7b0fe00731d7c6efb9753d7cb46dc9a7ab7c6fd8d911dade0dcdeb667",
       "decorative": true
     },
     "prop_ribbon": {
@@ -3468,7 +3836,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "56861f6155f6049d9aaf155e35caae8fc595a283e47ca1380fc6322df4e73a0d",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "3468f4703acd5a6831e46e29d2a96564d3b73675255fa380418a403b15752e73",
       "decorative": true
     },
     "prop_wheel": {
@@ -3497,7 +3867,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "9c28379813fd43a416333b74ced2dbe85f9fb3d8209f995aaf15a0de8f7e1be1",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "07c37af2790481a551aa64d1ed3526b6e793b0db74281d582bbe03f669c00868",
       "decorative": true
     },
     "prop_sack": {
@@ -3526,7 +3898,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "7aac125a42e649378ddf5c81f0c5ac478f2294ca522a3c23827ab69bb345d84e",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "0cb0568b02567e9a76f09a252b2d5951acd4749cae171f3be90e001c50555720",
       "decorative": true
     },
     "prop_basket": {
@@ -3555,7 +3929,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "97fd4bf635cf68da947828be7b20a65895056a1b5c0c8e03f6bbef146d152542",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "011c6c39b22825895857b1d48f001874aad66d1c3398972f66527365e5aa4993",
       "decorative": true
     },
     "prop_bird": {
@@ -3569,22 +3945,26 @@
         24,
         44
       ],
-      "columns": 1,
+      "columns": 3,
       "rows": 1,
-      "frame_count": 1,
+      "frame_count": 3,
       "animations": {
         "idle": {
           "frames": [
-            0
+            0,
+            1,
+            2
           ],
-          "fps": 1,
-          "loop": false
+          "fps": 3,
+          "loop": true
         }
       },
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "3fdb83a8cb54949018519f3ac36fdb3ab1b5462b38132cfd954940f74e07f37b",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "87d1408b506493ebbdcf60f20a2ae7d8bc618808d54aeff4423deef1410accbc",
       "decorative": true
     },
     "prop_butterfly": {
@@ -3598,22 +3978,26 @@
         24,
         44
       ],
-      "columns": 1,
+      "columns": 3,
       "rows": 1,
-      "frame_count": 1,
+      "frame_count": 3,
       "animations": {
         "idle": {
           "frames": [
-            0
+            0,
+            1,
+            2
           ],
-          "fps": 1,
-          "loop": false
+          "fps": 3,
+          "loop": true
         }
       },
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "3a7f7cbff6cb10249b9a63016e65c7d558d649cb176221edebf1fa09b05fe67c",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "814422a3bb0f6e309b0c9587d03c0e25092377cc226f29413ba4047294fe8e48",
       "decorative": true
     },
     "cosmetic_pot": {
@@ -3642,7 +4026,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "21383bff36e1c9c3ffce694a37b9ff8f0a81a6e93b5b135e4643e4aa342b9abe",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "a819a6d19ce434fe339af6a34709d4aa1caed1c9f522a9c181bd1bfea3fefce5",
       "decorative": true,
       "coin_cost": 200
     },
@@ -3672,7 +4058,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "1bd71c1a80ddd57c221f95a966cca5a5395c14e66d104aca06e03ff20912c6b7",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "0c39aae96226ec7b24fc2894b47cc27d7f303db9995e8aea64f9c7e702d0db78",
       "decorative": true,
       "coin_cost": 200
     },
@@ -3702,7 +4090,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "1bcf9a6be3eae2dc462ffeb2d62c24f52a928e885dee536ba4c0222cadd237d5",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "68c5d680f9189e24bc512f30fd8f4db04da74d8e1be3c660e5df20489932a9be",
       "decorative": true,
       "coin_cost": 200
     },
@@ -3732,7 +4122,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "240dc91a2d96d97226fc4e4769e47155bbaf46c87037b755a02ea3dd43f7d7cd",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "bbb4f39f32b9c94c7f686e9f411bbf15b464fbed65bf50a9ffd6d02dcaf65bd4",
       "decorative": true,
       "coin_cost": 200
     },
@@ -3762,7 +4154,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "c6244368d88093faf7586665d0eeca57ca4975a7e1fda907aa308523f9e578f1",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f4e67f21f8df8c1b47515ca209f85a93250467b2410fe447a83ecd1974f6a93b",
       "decorative": true,
       "coin_cost": 200
     },
@@ -3792,7 +4186,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "e30ee428695e9cd695a9c413e19512987aa076392ff147bc8638b51ed53422c0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "adebdf868ca81321927a3c25e25cb6feb26efe84696f4b12bbcee3f83f123c48",
       "decorative": true,
       "coin_cost": 200
     },
@@ -3822,7 +4218,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "34f7f435ec6eabe6851596e3033cf7e1f89af04454a45e28513a9d3759f02da5"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "375781e00861cb068690e4231a404e456585e5edad26f6ae74d4dc9bcb4abf3c"
     },
     "key_P1": {
       "id": "key_P1",
@@ -3850,7 +4248,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "b5c00f1e452cdbe6952d05368f8baf5618a26b888bab50a4d6a5e82cf33045a7"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "ded10d103819411f2ccb457006637a35edb3404a82c480c8ef02750276f71e62"
     },
     "clue_P2": {
       "id": "clue_P2",
@@ -3878,7 +4278,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "e7414c60d50f80da9dc50019c76308880e5b740988dc7254b0a2191e54209e57"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "781c4dcea6a994f027178b59e3a32e096869b65b42321156e2400827ec42cbd3"
     },
     "key_P2": {
       "id": "key_P2",
@@ -3906,7 +4308,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "79afb2124f1d9c25f72bb01d3aa30baa2463c74a607a02d5e7bdca6046da66ff"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "6d5709aa63af7ce8467351a0659178ae5a0b84422330027e9e56699b1f1d710a"
     },
     "clue_P3": {
       "id": "clue_P3",
@@ -3934,6 +4338,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "aacdd2860b2c49f7cd6dc67bf61a054c2983e469494a5ac097be35b6613f5298"
     },
     "key_P3": {
@@ -3962,7 +4368,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "b4b1bb6694d7b2487664be186d837c5060e3eba8361e7c795893f0d5593f1552"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "b29502b973a6d9b79f3e46fc8d789389776866456b9525c97aaefd0ce9a6ee20"
     },
     "clue_P4": {
       "id": "clue_P4",
@@ -3990,6 +4398,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "c78f7906b2c32ded31e76b7263a2deb66858cc1db605cb447d4a3f7a5153a615"
     },
     "key_P4": {
@@ -4018,7 +4428,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "2f976bb32f6f03db9dd9e512f95db3cf0df8b99fbd526adc7434a9afe1a843d7"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "348063c17254bf3fd1b49d8b4cb54e6091a5a0a514cea61d9fa7d55cdc596379"
     },
     "clue_P5": {
       "id": "clue_P5",
@@ -4046,7 +4458,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "e258ba2b71628f09c52049d59c8812ce6858905ff911572c093ea7a92623f714"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "dd4de8e4b5ee4c7471697165eba8ba9c0f1f0e5e9656a6aaa0d2e7d0e0f9ab5f"
     },
     "key_P5": {
       "id": "key_P5",
@@ -4074,7 +4488,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "d9e4044492e61e0e710897588e5364c3ca25e4bada613d356630f341b7bf634e"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "5b0c510636376d320e5e815dbc99f078edbac313b343099ac56702e14b1adf78"
     },
     "clue_P6": {
       "id": "clue_P6",
@@ -4102,7 +4518,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "7782977bf506a86c1dabba7e54bf5057a4bc26e9db2e02dbf414b52b06349042"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "792d8a451822403b5532c770d8527ce8af299bedfd11602f54e7a962b40923c4"
     },
     "key_P6": {
       "id": "key_P6",
@@ -4130,7 +4548,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "f680d7a10a536414367337db0c939ad9cfb21ec88f9600f621b03c1f441500f0"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "91e551fdd0916e20b3da92df25bceae5f8d857ba924417c506f107be29cc0afb"
     },
     "clue_P7": {
       "id": "clue_P7",
@@ -4158,6 +4578,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "e6faaaf9f3e60f1f4b2720e7326d4e39bf43b113b1ff7e0c861250eae73e8c49"
     },
     "key_P7": {
@@ -4186,7 +4608,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "627c351e5e7b8ee390a726854933fa9be79f45f361a0ee14914933f1ed354315"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "c1e7a6358fb0db8bfd55f3aa56fd826df2674e0212c4d0e038cb9f5c86465b5d"
     },
     "clue_P8": {
       "id": "clue_P8",
@@ -4214,6 +4638,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "3f46ab425cb043d2d646212aa07823c374a419b55953f4f3f6134447b92ec7ad"
     },
     "key_P8": {
@@ -4242,7 +4668,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "9c558a2e643c55ca5097e43d274d0c496c911b3c75049e8c03224983696d5519"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "51295dee5714ad27058c426e15d990f7392f9a1012c4ebd39c7682e9d95ab477"
     },
     "action_move": {
       "id": "action_move",
@@ -4270,6 +4698,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "392959862e8ede6f04effa6dfba543ccad8c8a8530ae224a8e494e8dfc819c85"
     },
     "action_interact": {
@@ -4298,6 +4728,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "79c23812c35738b67a9a0ade1ea11e47e8de12ba1c680772a18c3629c3f438f2"
     },
     "action_inspect": {
@@ -4326,7 +4758,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "016f69dd4cf13e6cab94557e852001dedd409d07cafd53d18ba2da11a40e1332"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "38bc17bfc9c8ee6ad2b64e41d01b62d15d42518b3c566cc5338005961ff35c1b"
     },
     "action_notebook": {
       "id": "action_notebook",
@@ -4354,7 +4788,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "d8701546178efdfa0609ecb755b8e41fb3b58b804cdaf8905987d4b2c55cb53f"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "51186167272c40223fc50374017d1abbfc81a58c05e48e670fe8de1a438443df"
     },
     "action_seed": {
       "id": "action_seed",
@@ -4382,6 +4818,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "e07570d12fbd8fdefce95ec5fed5bc3dba7eab939d54031671128def00f7b851"
     },
     "action_water": {
@@ -4410,6 +4848,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "ee934dd1acb91f0d7ecb328d45f4b1bc9446515bb6fdc1b0e16287ec3fd3acc1"
     },
     "action_harvest": {
@@ -4438,6 +4878,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "3a166bab892275a188f12d14b8aa6a204b522b97577c781583e856203e1e8492"
     },
     "action_sell": {
@@ -4466,7 +4908,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "ed87c4c0def5800585ea1ecfc4cdda2379434150399a73741ffc52c2cbfc5d7f"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "33971553f408f4e7c02a7e53c1b5bd7a8a37f8cbed6ac788b1bc34bfc7c1a883"
     },
     "action_repair": {
       "id": "action_repair",
@@ -4494,7 +4938,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "bb5be1b802dd628721499377a247d0e211381a5e7a6c8f62c6a50fc509113eb1"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "82c6c55508132f0d2c50973cd66d40edd0cc71244e00515d1033cc10e4be4e48"
     },
     "action_upgrade": {
       "id": "action_upgrade",
@@ -4522,6 +4968,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "79b0bba0458c61c0dde17b60c46b960e6cc6d831c331912fe98ca5678f8a83c8"
     },
     "action_save": {
@@ -4550,7 +4998,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "1e963a9b9816515446965f0fb6972eeb995de073ce5688c760111d0554dd0467"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "71f7472e60507b572c3c362d4a37086601f5b3d2a87f6088b08ba61533e9d608"
     },
     "action_options": {
       "id": "action_options",
@@ -4578,7 +5028,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "221b3688af2550df9c087207adcc632103f525d180c0c6447d9b7d1492a373f3"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "cf50cfedd3f5ffb3c610ee6bc7e1baab5cb555fb9e3c72b37cb312420df255fa"
     },
     "tree_Cultivo": {
       "id": "tree_Cultivo",
@@ -4606,7 +5058,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "7506858c04f37b48eabd7b1afba26735fa1234e89d10faaf600a9780ee4c1805"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "7e9fe97ec8d8cf95eb64badddd89904aed688adb5f60b3970c2975e552546250"
     },
     "tree_Engenho": {
       "id": "tree_Engenho",
@@ -4634,7 +5088,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "221b3688af2550df9c087207adcc632103f525d180c0c6447d9b7d1492a373f3"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "cf50cfedd3f5ffb3c610ee6bc7e1baab5cb555fb9e3c72b37cb312420df255fa"
     },
     "tree_Escuta": {
       "id": "tree_Escuta",
@@ -4662,6 +5118,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "343a2871713463f3a5325afe6378ed3bc2ea0a792e77d15158deefb35daee91d"
     },
     "repair_R1": {
@@ -4690,7 +5148,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "67fc5f32c1165dc1462e50edbc81777a9d952e6e61148c69d69e3531fc3d8139"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "c0054154d0d11ce412dceb8b958e364f2acf77c5cf42e892cb89897c7e66ea11"
     },
     "repair_R2": {
       "id": "repair_R2",
@@ -4718,7 +5178,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "275def9855820aa151bd836b0976eaf7cd494a23f8472e145d6550fc34e2d1d9"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "ff99206761c956fb496566b5dc0b93c610f68629564ce2ed932598693ad0e828"
     },
     "repair_R3": {
       "id": "repair_R3",
@@ -4746,7 +5208,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "2474ede9185ea5ac5ba9bb4825d391cb6be3a3bd2575c23412075b46d23da7b1"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "c5b0f6ea2fe843fb41e217bc1611e6cba5591a130b5e08f9d3de1368569026ca"
     },
     "repair_R4": {
       "id": "repair_R4",
@@ -4774,7 +5238,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "6d4757962143ce4c9de3d79ec055575db3e78a3838018acb1bd180bb49924b31"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "d4d1adbcb22af1013fa6a0a5ec29ab1d005834e6c334bf3f56ed011817c087d1"
     },
     "repair_R5": {
       "id": "repair_R5",
@@ -4802,7 +5268,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "67fc5f32c1165dc1462e50edbc81777a9d952e6e61148c69d69e3531fc3d8139"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "c0054154d0d11ce412dceb8b958e364f2acf77c5cf42e892cb89897c7e66ea11"
     },
     "repair_R6": {
       "id": "repair_R6",
@@ -4830,7 +5298,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "13d8c543335d29a371be71a8260f853e86855bea4ccfb069bd2479085576a974"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "53b011dea9800ea6d8cf172921b8e9b038c292ec1ad0138d38914af6faef5de8"
     },
     "fish_1": {
       "id": "fish_1",
@@ -4858,6 +5328,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "2c2116dcf0f51ce5bd614374044cf0fa2ab44032bc62e448730862933d011eac"
     },
     "fish_2": {
@@ -4886,6 +5358,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "f99616c5ff92308796a85733b3488c852c06642db3a61542fb0cae3a09a3ccc8"
     },
     "fish_3": {
@@ -4914,6 +5388,8 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
       "sha256": "3c30d4c13f587d26858fe069b836a2733e979f70bd009d1b4fc4c01e9ea68f83"
     },
     "item_wood": {
@@ -4942,7 +5418,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "d49f762cd3b8af7a4d7927ed5d2f5871a74d4336b5a2b01840973f00345826ef"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "97914d26b62dfd489d23a9ffab2ee4a8f3458ef732d88b0ccc94e2823da5fe68"
     },
     "item_stone": {
       "id": "item_stone",
@@ -4970,7 +5448,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "7460fca3c87d67f4922f3a29d9a1aef07c680000269bedcbf3f0040bb03b9114"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "01b2ba3688e4a9034480bf1d4a083d190557598e8b1022c148950813bf30ccbb"
     },
     "item_fiber": {
       "id": "item_fiber",
@@ -4998,7 +5478,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "892039c53b660703a776675773a37009a2788265615f64b84a5f7c4c48ce82c1"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "8e069415dc08f586f270b1336a5dbf2c21d5d33c8779ab6a71a399f323a1021d"
     },
     "item_compost": {
       "id": "item_compost",
@@ -5026,7 +5508,9 @@
       "directions": [],
       "filter": "nearest",
       "license": "CC0-1.0",
-      "sha256": "0cbe6c9805ffae5db98a0c8ea950c042bb439cb7c18d333391c62fc9af52cf14"
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "c61e7ae3fc5ac85a86800f8e051726a15442fdb51da6a1bf7fc0b883d3497caf"
     },
     "sfx_seed": {
       "id": "sfx_seed",
@@ -5349,6 +5833,1406 @@
       "peak": 0.098327,
       "license": "CC0-1.0",
       "sha256": "23857a1fd1e570fc64fab3dfe9a1f534c5d0135ab4ca05f7dc495ab497e75620"
+    },
+    "terrain_soil_05": {
+      "id": "terrain_soil_05",
+      "path": "res://assets/terrain/soil_05.png",
+      "frame_size": [
+        64,
+        32
+      ],
+      "pivot": [
+        32,
+        16
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "08ac3cb1c023c653c6e5883351366c1c4ce6b24d27b9a2b34a6dd05152fce706",
+      "terrain_kind": "soil"
+    },
+    "terrain_wet_01": {
+      "id": "terrain_wet_01",
+      "path": "res://assets/terrain/wet_01.png",
+      "frame_size": [
+        64,
+        32
+      ],
+      "pivot": [
+        32,
+        16
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "c0a729c6eac4df47e7492e13d5d000276a2b8097149d078e07b68c2166c161d6",
+      "terrain_kind": "wet"
+    },
+    "terrain_wet_02": {
+      "id": "terrain_wet_02",
+      "path": "res://assets/terrain/wet_02.png",
+      "frame_size": [
+        64,
+        32
+      ],
+      "pivot": [
+        32,
+        16
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "2ef86282aa39c221e9f35601f91b76f45eddc0315e2dbe7758901288ab943ef9",
+      "terrain_kind": "wet"
+    },
+    "terrain_wet_03": {
+      "id": "terrain_wet_03",
+      "path": "res://assets/terrain/wet_03.png",
+      "frame_size": [
+        64,
+        32
+      ],
+      "pivot": [
+        32,
+        16
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "6af777cb110ea282e2f49286f7c26e3c0a2304bc5fdb10649d6caa90cc95259e",
+      "terrain_kind": "wet"
+    },
+    "terrain_wet_04": {
+      "id": "terrain_wet_04",
+      "path": "res://assets/terrain/wet_04.png",
+      "frame_size": [
+        64,
+        32
+      ],
+      "pivot": [
+        32,
+        16
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "3740fa8ef552119d2c822c6d5bc338a868a651b2376b78ea2adbdd09e9545af1",
+      "terrain_kind": "wet"
+    },
+    "terrain_wet_05": {
+      "id": "terrain_wet_05",
+      "path": "res://assets/terrain/wet_05.png",
+      "frame_size": [
+        64,
+        32
+      ],
+      "pivot": [
+        32,
+        16
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "104cc4dde903d18857610801dc52502f3ffafcd2b5045fd117192d39551e5294",
+      "terrain_kind": "wet"
+    },
+    "terrain_water_05": {
+      "id": "terrain_water_05",
+      "path": "res://assets/terrain/water_05.png",
+      "frame_size": [
+        64,
+        32
+      ],
+      "pivot": [
+        32,
+        16
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "3aca53d724d636a227eca918ef7a40a25408626bb224cc461e3d8131d54d0a29",
+      "terrain_kind": "water"
+    },
+    "terrain_stone_05": {
+      "id": "terrain_stone_05",
+      "path": "res://assets/terrain/stone_05.png",
+      "frame_size": [
+        64,
+        32
+      ],
+      "pivot": [
+        32,
+        16
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "ac2adbb39277ffdf4b65c756cdd5c66aa448a8f915b96fd3e1713d7cdd411b4d",
+      "terrain_kind": "stone"
+    },
+    "prop_tree_oak_variant_2": {
+      "id": "prop_tree_oak_variant_2",
+      "path": "res://assets/decoration/tree_oak_variant_2.png",
+      "frame_size": [
+        80,
+        96
+      ],
+      "pivot": [
+        40,
+        92
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "5d73e935fe357868c709db62967360254d7dc1e3c373a74e1dab76dbccf28300",
+      "decorative": true,
+      "variant": 2
+    },
+    "prop_tree_fruit_variant_2": {
+      "id": "prop_tree_fruit_variant_2",
+      "path": "res://assets/decoration/tree_fruit_variant_2.png",
+      "frame_size": [
+        80,
+        96
+      ],
+      "pivot": [
+        40,
+        92
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "7c9563bd8ee9d78beb40cc0bc8af3b80dc33c3ae04018919f0deccd7d6c425ed",
+      "decorative": true,
+      "variant": 2
+    },
+    "prop_grass_variant_2": {
+      "id": "prop_grass_variant_2",
+      "path": "res://assets/decoration/grass_variant_2.png",
+      "frame_size": [
+        48,
+        48
+      ],
+      "pivot": [
+        24,
+        44
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "e723b17a0b8fe5ff909bbe8509751dd69d7712040d440cf83b74aef0309250d0",
+      "decorative": true,
+      "variant": 2
+    },
+    "prop_fern_variant_2": {
+      "id": "prop_fern_variant_2",
+      "path": "res://assets/decoration/fern_variant_2.png",
+      "frame_size": [
+        48,
+        48
+      ],
+      "pivot": [
+        24,
+        44
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "e723b17a0b8fe5ff909bbe8509751dd69d7712040d440cf83b74aef0309250d0",
+      "decorative": true,
+      "variant": 2
+    },
+    "prop_rock_variant_2": {
+      "id": "prop_rock_variant_2",
+      "path": "res://assets/decoration/rock_variant_2.png",
+      "frame_size": [
+        48,
+        48
+      ],
+      "pivot": [
+        24,
+        44
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "4bbd1eafe990fc5fe7a03201af40912bacb9615242ed17a5321873ade8801cec",
+      "decorative": true,
+      "variant": 2
+    },
+    "prop_smallrock_variant_2": {
+      "id": "prop_smallrock_variant_2",
+      "path": "res://assets/decoration/smallrock_variant_2.png",
+      "frame_size": [
+        48,
+        48
+      ],
+      "pivot": [
+        24,
+        44
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "4bbd1eafe990fc5fe7a03201af40912bacb9615242ed17a5321873ade8801cec",
+      "decorative": true,
+      "variant": 2
+    },
+    "prop_stump_variant_2": {
+      "id": "prop_stump_variant_2",
+      "path": "res://assets/decoration/stump_variant_2.png",
+      "frame_size": [
+        48,
+        48
+      ],
+      "pivot": [
+        24,
+        44
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "46d835743785a70e47ab0200cdcc89e5546d1a009e68f6fcf9eaef9caf723650",
+      "decorative": true,
+      "variant": 2
+    },
+    "prop_log_variant_2": {
+      "id": "prop_log_variant_2",
+      "path": "res://assets/decoration/log_variant_2.png",
+      "frame_size": [
+        48,
+        48
+      ],
+      "pivot": [
+        24,
+        44
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "34bda154ca3e0ced02704afed123a2a7806472e32dd483e0668c695bfb78fe17",
+      "decorative": true,
+      "variant": 2
+    },
+    "prop_bush_variant_2": {
+      "id": "prop_bush_variant_2",
+      "path": "res://assets/decoration/bush_variant_2.png",
+      "frame_size": [
+        48,
+        48
+      ],
+      "pivot": [
+        24,
+        44
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f07890274fd458a13537e2ff6b60a25c0a1666d91ff78e168099c1043b05b926",
+      "decorative": true,
+      "variant": 2
+    },
+    "prop_crate_variant_2": {
+      "id": "prop_crate_variant_2",
+      "path": "res://assets/decoration/crate_variant_2.png",
+      "frame_size": [
+        48,
+        48
+      ],
+      "pivot": [
+        24,
+        44
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "e682bf34cd6b5934e259aef9bf8f325e910f8f6222b65e49fd7cd86d54e64f61",
+      "decorative": true,
+      "variant": 2
+    },
+    "prop_barrel_variant_2": {
+      "id": "prop_barrel_variant_2",
+      "path": "res://assets/decoration/barrel_variant_2.png",
+      "frame_size": [
+        48,
+        48
+      ],
+      "pivot": [
+        24,
+        44
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "e76fea4bbf957747288c6b1d3cbc59d833288d58fc50c9a1cae54d0a358e1d43",
+      "decorative": true,
+      "variant": 2
+    },
+    "ui16_seed": {
+      "id": "ui16_seed",
+      "path": "res://assets/ui16/seed.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "1fdb0974cb1b12ee1e250874e4b8a217d1b551fbb444cbef5f8c67f04764f6c2"
+    },
+    "ui16_seed_locked": {
+      "id": "ui16_seed_locked",
+      "path": "res://assets/ui16/seed_locked.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "ded27bdd1e59bed0682b4bd437d125012d6c6fb5d0f4087781497ed242f3b96a"
+    },
+    "ui16_water": {
+      "id": "ui16_water",
+      "path": "res://assets/ui16/water.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "d083a2e199655bd528c1c844551d0ca7b2851069a552174fdb1f3907ba29d32e"
+    },
+    "ui16_water_locked": {
+      "id": "ui16_water_locked",
+      "path": "res://assets/ui16/water_locked.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f7326390b607bd39f43a1ca5ebb53917971deaf4d95f3f9a00610b7fd91f3bf8"
+    },
+    "ui16_harvest": {
+      "id": "ui16_harvest",
+      "path": "res://assets/ui16/harvest.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "43bd01eb3d28a77167ea90113c3342f1ad4e8f0222abc6c877a9f113a4e4b2df"
+    },
+    "ui16_harvest_locked": {
+      "id": "ui16_harvest_locked",
+      "path": "res://assets/ui16/harvest_locked.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "13fa74f1c04218ff099ffccb3a0fa3617982e860f49f3176b37952f568f89ba5"
+    },
+    "ui16_sell": {
+      "id": "ui16_sell",
+      "path": "res://assets/ui16/sell.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "62d1887451764c56278e29658f84f344c5444d91dde8d838ff83e4feb8f97017"
+    },
+    "ui16_sell_locked": {
+      "id": "ui16_sell_locked",
+      "path": "res://assets/ui16/sell_locked.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "9e4567a808526f1700a83882a9a05609f68093125394e8a2d169f87ee98c393a"
+    },
+    "ui16_notebook": {
+      "id": "ui16_notebook",
+      "path": "res://assets/ui16/notebook.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "7b12098b2cb7012cbec9aaa7b8438142d739462b5f56118b79d4a49ebd28bbc1"
+    },
+    "ui16_notebook_locked": {
+      "id": "ui16_notebook_locked",
+      "path": "res://assets/ui16/notebook_locked.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "d530a739dea1a13637063031c9fb97b60e8721c9f89a7aeac4a334af72e9d5ba"
+    },
+    "ui16_upgrade": {
+      "id": "ui16_upgrade",
+      "path": "res://assets/ui16/upgrade.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "35f5d51e6bf611ce27501237cf2b32e87eadc86112d7f407fa5d895fa45b400c"
+    },
+    "ui16_upgrade_locked": {
+      "id": "ui16_upgrade_locked",
+      "path": "res://assets/ui16/upgrade_locked.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "a8e87c5de5353c00f20eab5899b5f1c39ff9514f419ab2c62a90ed34d037bffd"
+    },
+    "ui16_inspect": {
+      "id": "ui16_inspect",
+      "path": "res://assets/ui16/inspect.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "8a120001f11f57775909b5ce4fe4bd27cb9cfe2b01a64fc53435d20e6d5b5352"
+    },
+    "ui16_inspect_locked": {
+      "id": "ui16_inspect_locked",
+      "path": "res://assets/ui16/inspect_locked.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f3ef8d2a231408c5fd45a42308701cb3ece7410a90648443b27b3de8d093babb"
+    },
+    "ui16_options": {
+      "id": "ui16_options",
+      "path": "res://assets/ui16/options.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "e1951af929dc5abebc27a745e2c00bbe8c8f3e4b81a4aa5f5be5781a3a58ff6f"
+    },
+    "ui16_options_locked": {
+      "id": "ui16_options_locked",
+      "path": "res://assets/ui16/options_locked.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "c07208b3183661e6dc4d0ba959051683f7efe30d0161981f134d7f40b6a361cd"
+    },
+    "ui16_coin": {
+      "id": "ui16_coin",
+      "path": "res://assets/ui16/coin.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "62d1887451764c56278e29658f84f344c5444d91dde8d838ff83e4feb8f97017"
+    },
+    "ui16_coin_locked": {
+      "id": "ui16_coin_locked",
+      "path": "res://assets/ui16/coin_locked.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "9e4567a808526f1700a83882a9a05609f68093125394e8a2d169f87ee98c393a"
+    },
+    "ui16_pause": {
+      "id": "ui16_pause",
+      "path": "res://assets/ui16/pause.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "aa580b6f1da39e9a2fd3505ce7b6585e8e8a20186c9dc1385691ab00113f5f1b"
+    },
+    "ui16_pause_locked": {
+      "id": "ui16_pause_locked",
+      "path": "res://assets/ui16/pause_locked.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f4313e12ddc21da1f3821527324d40f90761f70f4d49bf1c48b4509f7ca41610"
+    },
+    "panel_normal": {
+      "id": "panel_normal",
+      "path": "res://assets/ui/panel_normal.png",
+      "frame_size": [
+        24,
+        24
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "9349ea2f420de382795f9b84ef10a8e6d8b76b8aba01841aa42dc85edc6b595f",
+      "nine_slice_margins": [
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    "panel_high_contrast": {
+      "id": "panel_high_contrast",
+      "path": "res://assets/ui/panel_high_contrast.png",
+      "frame_size": [
+        24,
+        24
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "columns": 1,
+      "rows": 1,
+      "frame_count": 1,
+      "animations": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "fps": 1,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "8f639320e0665efcdca486231560c74517b24ca4c31162a56089f0043488287f",
+      "nine_slice_margins": [
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    "effect_seed": {
+      "id": "effect_seed",
+      "path": "res://assets/effects/seed.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 3,
+      "rows": 1,
+      "frame_count": 3,
+      "animations": {
+        "pop": {
+          "frames": [
+            0,
+            1,
+            2
+          ],
+          "fps": 12,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "244262c74d4400c5f487e44f98a7cea3f82703f2fc0ae6ffc81ffd80bb79e16a"
+    },
+    "effect_water": {
+      "id": "effect_water",
+      "path": "res://assets/effects/water.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 3,
+      "rows": 1,
+      "frame_count": 3,
+      "animations": {
+        "pop": {
+          "frames": [
+            0,
+            1,
+            2
+          ],
+          "fps": 12,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "4e73aca6c5003370001e206e3fd33bb36b3932cefe0d2e8403ee81760be47200"
+    },
+    "effect_harvest": {
+      "id": "effect_harvest",
+      "path": "res://assets/effects/harvest.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 3,
+      "rows": 1,
+      "frame_count": 3,
+      "animations": {
+        "pop": {
+          "frames": [
+            0,
+            1,
+            2
+          ],
+          "fps": 12,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "f104493c118044f061711e230b59732fea8dea8035e56e6e7e9420d64851fe7e"
+    },
+    "effect_footstep": {
+      "id": "effect_footstep",
+      "path": "res://assets/effects/footstep.png",
+      "frame_size": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "columns": 3,
+      "rows": 1,
+      "frame_count": 3,
+      "animations": {
+        "pop": {
+          "frames": [
+            0,
+            1,
+            2
+          ],
+          "fps": 12,
+          "loop": false
+        }
+      },
+      "directions": [],
+      "filter": "nearest",
+      "license": "CC0-1.0",
+      "source": "tools/north_asset_forge_2d/forge.py",
+      "palette": "palette.py:COLORS",
+      "sha256": "034be1a1a7c9faaf1d5a0c1a1f22e3956c78dce145f0f1e9028bc7144dde4e73"
     }
   }
 }

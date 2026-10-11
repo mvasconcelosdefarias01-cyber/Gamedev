@@ -8,9 +8,10 @@ Produz pixel art raster original usando desenho determinístico em Python/Pillow
 python3 tools/north_asset_forge_2d/forge.py sample
 python3 tools/north_asset_forge_2d/forge.py full
 python3 tools/north_asset_forge_2d/forge.py validate
+python3 tools/north_asset_forge_2d/contact_sheets.py after
 ```
 
-Requer Python 3.10+, Pillow, numpy e ffmpeg. Não instalar dependências globais nem alterar o jogo para operar a ferramenta. As exportações usam PNG RGBA sem antialiasing, escala 1×, metadados de pivô em pixels locais; WAV PCM 16-bit de fonte e OGG Vorbis para loops. Nearest neighbor deve ser selecionado no Godot.
+Requer Python 3.10+, Pillow, numpy e ffmpeg. Não instalar dependências globais nem alterar o jogo para operar a ferramenta. As exportações usam a paleta mestre de 48 cores em `palette.py`, PNG RGBA sem antialiasing, escala 1×, metadados de pivô em pixels locais; WAV PCM 16-bit de fonte e OGG Vorbis para loops. Nearest neighbor deve ser selecionado no Godot. `contact_sheets.py` cria o inventário anterior/final e pranchas por fase em `docs/art/`; a prancha `before` deve ser feita antes de qualquer regeneração.
 
 `sample` exporta as seis culturas, ícones, personagem, estados dos canteiros e uma prévia do bloco; ao repetir depois de `full`, preserva no manifest o inventário completo. `full` amplia o inventário após a avaliação do bloco. `validate` verifica os bytes realmente exportados, dimensões, frames, pivôs, hashes e PCM decodificado dos áudios. A validação técnica não substitui revisão visual/humana.
 

@@ -4,11 +4,11 @@
 
 `fazenda_high_contrast.tres` oferece painéis brancos, tinta quase preta e estados de botão com contornos mais diretos. A opção de contraste alto pode trocar o recurso no Control raiz. Para estados do mundo, conservar símbolos e reforçar outlines; trocar só o tema de UI não altera sprites do mundo.
 
-O baseline corresponde a UI de 1080p. Em 720p, o corpo pode usar 16px; UI/texto 100/125/150% ajustam layout/tipografia no controlador, sem duplicar a multiplicação. Texto é vetorial e usa filtragem normal; nearest neighbor fica reservado ao mundo e ícones pixelados. Botões possuem 20px de padding vertical; com fonte 18 atingem altura de aproximadamente 42px. Atribuir tamanho mínimo explícito 40px, 56px a 150%.
+O baseline corresponde a UI de 1080p. Em 720p, o corpo pode usar 16px; UI/texto 100/125/150% ajustam layout/tipografia no controlador, sem duplicar a multiplicação. A fonte pixelada é importada sem antialiasing/subpixel; texturas do mundo, ícones e painéis usam nearest neighbor. Botões possuem 20px de padding vertical; com fonte 18 atingem altura de aproximadamente 42px. Atribuir tamanho mínimo explícito 40px, 56px a 150%.
 
 Papel #F7F4EB e tinta #243C47 possuem contraste alto. Estados usam também texto/ícone/forma. Botões bloqueados precisam de explicação próxima ou tooltip com foco de teclado. O tema não fornece os ícones de pause/custo/culturas: estes são exports do projeto de assets.
 
-Fonte DejaVu Sans copiada do pacote de sistema `fonts-dejavu-core`; licença em `FONT_LICENSE.txt`. Não usar a fonte para atribuir autoria do jogo. Não é fonte pixelada e inclui os acentos do português brasileiro.
+Fonte Pixelify Sans do Google Fonts (OFL 1.1); licença em `FONT_LICENSE.txt`. SHA-256 do TTF: `9ba86cd010a4de309d263ceff8e8044092c9db7efda869620cb9ff1c4389e8a5`. Inclui os acentos do português brasileiro. Painéis usam texturas pixeladas de nove fatias geradas localmente.
 
 `farm_minimap.gd` é um `Control` somente de leitura. API: `configure(simulation, player_tile, destination_tile=Vector2(-1,-1))`; `set_destination_name("...")` atualiza alternativa textual. Usa `GameData.BLOCKS` e `simulation.has(repair_id)`. Mostra cinco setores, seis blocos, posição do jogador e destino selecionado; setores fechados são listrados. A integração exibe após ESC5 e atualiza posição/destino a partir do HUD. A mínima é 180×112 com fonte16, 270×168 com fonte24, e o texto da legenda acompanha essa escala. O tooltip contém coordenadas, nome do destino e orientação; foco tem contorno visível. `minimap_preview_100.png` e `_150.png` são renders reais do componente.
 

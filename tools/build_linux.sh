@@ -43,7 +43,7 @@ Três slots locais, backup e preferências. Para backup manual, copie a pasta
 de dados Godot/app_userdata/Fazenda Entre Ecos de seu usuário antes de atualizar.
 As opções e os saves não estão dentro do pacote distribuído.
 
-Arte e áudio próprios CC0; Godot MIT; fonte DejaVu com sua licença incluída.
+Arte e áudio próprios CC0; Godot MIT; fonte Pixelify Sans (OFL) com sua licença incluída.
 BUNDLE_README
 python3 - <<'PY'
 from pathlib import Path

@@ -24,7 +24,9 @@
   "directions": [],
   "filter": "nearest",
   "license": "CC0-1.0",
-  "sha256": "21383bff36e1c9c3ffce694a37b9ff8f0a81a6e93b5b135e4643e4aa342b9abe",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "a819a6d19ce434fe339af6a34709d4aa1caed1c9f522a9c181bd1bfea3fefce5",
   "decorative": true,
   "coin_cost": 200
 }

@@ -1,0 +1,31 @@
+{
+  "id": "terrain_wet_05",
+  "path": "res://assets/terrain/wet_05.png",
+  "frame_size": [
+    64,
+    32
+  ],
+  "pivot": [
+    32,
+    16
+  ],
+  "columns": 1,
+  "rows": 1,
+  "frame_count": 1,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "directions": [],
+  "filter": "nearest",
+  "license": "CC0-1.0",
+  "source": "tools/north_asset_forge_2d/forge.py",
+  "palette": "palette.py:COLORS",
+  "sha256": "104cc4dde903d18857610801dc52502f3ffafcd2b5045fd117192d39551e5294",
+  "terrain_kind": "wet"
+}
